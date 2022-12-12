@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Список сущностей (объектов реального мира):
+Тест (Test)
 
-Things you may want to cover:
+Вопрос (Question)
 
-* Ruby version
+Ответ (Answer)
 
-* System dependencies
+Категория (Category)
 
-* Configuration
+Результат (Result)
 
-* Database creation
+Пользователи (User)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://semver.org/lang/ru/
