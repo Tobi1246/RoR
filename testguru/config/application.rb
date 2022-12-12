@@ -9,28 +9,12 @@ Bundler.require(*Rails.groups)
 module Testguru
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
+    config.load_defaults 6.1
 
-    # config/initializers/locale.rb
+    config.i18n.available_locales = [:en, :ru]
 
-    # Where the I18n library should search for translation files
-    I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
+    config.i18n.default_locale = :ru
 
-    # Permitted locales available for the application
-    I18n.available_locales = [:en, :pt]
-
-    # Set default locale to something other than :en
-    I18n.default_locale = :pt
-
-
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
     config.time_zone = 'Minsk'
-    config.active_record.default_timezone = :local
-    # config.eager_load_paths << Rails.root.join("extras")
   end
 end
