@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_12_100029) do
+ActiveRecord::Schema.define(version: 2023_01_12_102523) do
 
   create_table "answers", force: :cascade do |t|
     t.text "incorrect"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2023_01_12_100029) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.text "firstname"
+    t.text "firstname", null: false
     t.text "lastname"
     t.integer "age"
     t.datetime "created_at", precision: 6, null: false
