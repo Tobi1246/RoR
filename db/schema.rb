@@ -13,10 +13,12 @@
 ActiveRecord::Schema.define(version: 2023_01_12_113722) do
 
   create_table "answers", force: :cascade do |t|
-    t.boolean "answer", default: true
-    t.integer "question_id"
+    t.boolean "answer", default: true, null: false
+    t.text "response", null: false
+    t.integer "question_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -27,15 +29,15 @@ ActiveRecord::Schema.define(version: 2023_01_12_113722) do
 
   create_table "questions", force: :cascade do |t|
     t.text "title", null: false
-    t.integer "test_id"
+    t.integer "test_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
     t.integer "level", default: 1, null: false
-    t.string "autor", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -44,8 +46,11 @@ ActiveRecord::Schema.define(version: 2023_01_12_113722) do
     t.text "firstname", null: false
     t.text "lastname"
     t.integer "age"
+    t.text "author", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "questions", "tests"
 end
