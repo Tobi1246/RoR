@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 2023_01_12_113722) do
     t.text "firstname", null: false
     t.text "lastname"
     t.integer "age"
-    t.text "author", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
