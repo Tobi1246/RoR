@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-	def levels(lvl)
-		self.joins("INNER JOIN tests ON tests.id = users.id")
-		  .where("level = ? ,#{lvl}")
+  def levels(lvl)
+	 self.joins("INNER JOIN test_users ON tests_id = users_id")
+	   .where("level = ? ,#{lvl}")
 	end
 end
