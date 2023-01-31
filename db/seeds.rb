@@ -12,27 +12,27 @@ Test.destroy_all
 Category.destroy_all
 User.destroy_all
 
-User.create!(firstname: "Lion", lastname: "Di", age: 18)
-User.create!(firstname: "Tod", lastname: "Darck", age: 48)
-User.create!(firstname: "Joi", lastname: "Brain", age: 27)
-Category.create!(title: "Ruby")
-Category.create!(title: "HTML")
-Category.create!(title: "SQL")
-Test.create!(title:"Ruby", level: 1, author_id: User.ids.at(0), category_id: Category.ids.at(0))
-Test.create!(title:"HTML", level: 2, author_id: User.ids.at(1), category_id: Category.ids.at(1))
-Test.create!(title:"SQL", level: 2, author_id: User.ids.at(2), category_id: Category.ids.at(2))
-Question.create!(title:"What is object in Ruby", test_id: Test.ids.at(0))
-Question.create!(title:"What is teg <li>", test_id: Test.ids.at(1))
-Question.create!(title:"How to multi merge tables", test_id: Test.ids.at(2))
-Answer.create!(question_id: Question.ids.at(0),
+user = User.create!([{firstname: "Lion", lastname: "Di", age: 18},
+                     {firstname: "Tod", lastname: "Darck", age: 48},
+                     {firstname: "Joi", lastname: "Brain", age: 27}])
+category = Category.create!([{title: "Ruby"},
+             {title: "HTML"},
+             {title: "SQL"}])
+test = Test.create!([{title:"Ruby", level: 1, author_id: user.at(0).id, category_id: category.at(0).id},
+                     {title:"HTML", level: 2, author_id: user.at(1).id, category_id: category.at(1).id},
+                     {title:"SQL", level: 2, author_id: user.at(2).id, category_id: category.at(2).id}])
+question = Question.create!([{title:"What is object in Ruby", test_id: test.at(0).id},
+                             {title:"What is teg <li>", test_id: test.at(1).id},
+                             {title:"How to multi merge tables", test_id: test.at(2).id}])
+Answer.create!(question_id: question.at(0).id,
               body: "Object is the default root of all Ruby objects. 
               Object inherits from BasicObject which allows creating alternate object hierarchies.
               Methods on Object are available to all classes unless explicitly overridden.")
-Answer.create!(correct: false, question_id: Question.ids.at(0), body: "Class")
-Answer.create!(correct: false, question_id: Question.ids.at(0), body: "All except Class")
-Answer.create!(question_id: Question.ids.at(1), body: "List item")
-Answer.create!(correct: false, question_id: Question.ids.at(1), body: "link")
-Answer.create!(correct: false, question_id: Question.ids.at(1), body: "Create sort list")
-Answer.create!(question_id: Question.ids.at(2), body: "Usege JOIN  after constructions JOIN ON")
-Answer.create!(correct: false, question_id: Question.ids.at(2), body: "One usege JOIN and listing tables")
-Answer.create!(correct: false, question_id: Question.ids.at(2), body: "INNER JOIN")
+Answer.create!(correct: false, question_id: question.at(0).id, body: "Class")
+Answer.create!(correct: false, question_id: question.at(0).id, body: "All except Class")
+Answer.create!(question_id: question.at(1).id, body: "List item")
+Answer.create!(correct: false, question_id: question.at(1).id, body: "link")
+Answer.create!(correct: false, question_id: question.at(1).id, body: "Create sort list")
+Answer.create!(question_id: question.at(2).id, body: "Usege JOIN  after constructions JOIN ON")
+Answer.create!(correct: false, question_id: question.at(2).id, body: "One usege JOIN and listing tables")
+Answer.create!(correct: false, question_id: question.at(2).id, body: "INNER JOIN")
