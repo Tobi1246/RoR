@@ -8,7 +8,7 @@ class Test < ApplicationRecord
   has_many :questions, dependent: :destroy
  
   def self.desc_ttitle_and_category(category_title )
-    joins("INNER JOIN categories ON tests.category_id = categories.id")
+    includes(:category)
       .where(categories: {title: category_title})
       .order(title: :desc)
   end
