@@ -6,7 +6,6 @@ class Test < ApplicationRecord
   has_many :users, through: :test_users, dependent: :destroy
   has_many :questions, dependent: :destroy
 
-  validates :title, uniqueness: true, presence: true
   validates :level, numericality: { onle_integer: true }, presence: true
   validate :validate_min_level, :validate_max_level
 
