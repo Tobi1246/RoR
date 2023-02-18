@@ -9,8 +9,6 @@ class User < ApplicationRecord
   validates :firstname, presence: true
 
   def levels(lvl)
-    Test.includes(:users)
-          .where(test_users: {user_id: self.id},
-                 tests: {level: lvl})
+    tests.where(level: lvl)
   end
 end
