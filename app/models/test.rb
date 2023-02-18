@@ -6,7 +6,7 @@ class Test < ApplicationRecord
   has_many :users, through: :test_users, dependent: :destroy
   has_many :questions, dependent: :destroy
 
-  validates :level, numericality: { onle_integer: true }, presence: true
+  validates :level, numericality: { onle_integer: true, greater_than_or_equal_to: 0 }, presence: true
   validate :validate_min_level, :validate_max_level
 
   scope :easy_level, -> { where(level: 1) }
