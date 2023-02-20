@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   validates :firstname, presence: true
 
-  def levels(lvl)
-    tests.where(level: lvl)
+  def levels(level)
+    tests.where(level: level)
   end
 end
