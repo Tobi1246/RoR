@@ -4,7 +4,7 @@ class Answer < ApplicationRecord
   validates :body, presence: true
   validate :validate_answers_size, on: :create
 
-  scope :true_awswer, -> { where(correct: true) }
+  scope :correct, -> { where(correct: true) }
 
   private
 

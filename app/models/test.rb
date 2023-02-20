@@ -12,10 +12,10 @@ class Test < ApplicationRecord
   scope :easy_level, -> { where(level: 1) }
   scope :midle_level, -> { where(level: 2) }
   scope :hard_level, -> { where(level: 3) }
-  scope :asc_ttitle_and_category, -> { order(title: :asc) }
-  scope :desc_ttitle_and_category, -> (category_title) { 
+  scope :desc_title_and_category, -> (category_title) { 
                                        joins(:category)
                                          .where(categories: { title: category_title })
-                                         .order(title: :desc) }
+                                         .order(title: :desc)
+                                         .pluck('categories.title') }
 
 end
