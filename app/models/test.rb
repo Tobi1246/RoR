@@ -13,10 +13,9 @@ class Test < ApplicationRecord
   scope :midle_level, -> { where(level: 2) }
   scope :hard_level, -> { where(level: 3) }
   scope :asc_ttitle_and_category, -> { order(title: :asc) }
-  scope :desc_ttitle_and_category, -> { desc_ttitle_and_category.order(title: :desc) }
+  scope :desc_ttitle_and_category, -> (category_title) { 
+                                       joins(:category)
+                                         .where(categories: { title: category_title })
+                                         .order(title: :desc) }
 
-  def self.desc_ttitle_and_category(category_title)
-    joins(:category)
-      .where(categories: { title: category_title })
-  end
 end
