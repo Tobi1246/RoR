@@ -6,9 +6,9 @@ class User < ApplicationRecord
   has_many :test_users
   has_many :tests, through: :test_users, dependent: :destroy
 
-  def levels(lvl)
-    Test.includes(:users)
-          .where(test_users: {user_id: self.id},
-                 tests: {level: lvl})
+  validates :firstname, presence: true
+
+  def levels(level)
+    tests.where(level: level)
   end
 end
