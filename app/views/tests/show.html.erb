@@ -1,0 +1,4 @@
+<h1>Test</h1>
+<p>Title: <%= @test.title %></p>
+<p>Question: <%= @test.questions.pluck(:title) %></p>
+<p><%=  link_to "All test", tests_path %></p>

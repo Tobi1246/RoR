@@ -1,0 +1,6 @@
+<h1>Create New Questions</h1>
+<%= form_with question_path: @question do |f| %>
+  <p><%= f.label :title, "Text question" %></p>
+  <p><%= f.text_area :title %></p>
+  <p><%= f.submit 'Create' %></p>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>Create New Test</h1>
+<%= form_with model: @test do |f| %>
+  <p><%= f.label :title, "Test title" %></p>
+  <p><%= f.text_field :title %></p>
+  <p><%= f.label :level, "Level" %></p>
+  <p><%= f.text_field :level %></p>
+  <p><%= f.label :category_id, "Category id" %></p>
+  <p><%= f.text_field :category_id %></p>
+  <p><%= f.label :author_id, "Autor id" %></p>
+  <p><%= f.text_field :author_id %></p>
+  <p><%= f.submit 'Create' %></p>
+<% end %>

@@ -1,0 +1,4 @@
+<h1>Tests:</h1>
+<% @tests.each do |test| %>
+<p>Title: <%= test.title %> <%= link_to "Question#{test.questions.pluck(:title)}", test_questions_url(test) %> </p>
+<% end %>
