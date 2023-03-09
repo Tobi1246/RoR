@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     resources :questions, shallow: true
   end
 
-  post '/tests/:test_id/questions/new', to: 'questions#create'
+
 end

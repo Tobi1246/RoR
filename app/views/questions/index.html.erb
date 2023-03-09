@@ -1,4 +1,3 @@
- <% @test = Test.find(params[:test_id]) %> 
 <h1>Test questions:<%= @test.questions.pluck(:title)%> </h1>
 <p><%= link_to "Create new question", new_test_question_url(@test)  %></p>
 <p><%= link_to "Back to all tests", tests_path %></p>
