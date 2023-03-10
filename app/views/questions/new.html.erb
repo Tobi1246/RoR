@@ -1,5 +1,5 @@
 <h1>Create New Questions</h1>
-<%= form_with model: [:test, @question] do |f| %>
+<%= form_with model: [@test, @question] do |f| %>
   <% if @question.errors.any? %>
   <ul>
     <% @question.errors.full_messages.each do |message| %>
