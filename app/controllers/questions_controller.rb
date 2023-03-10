@@ -1,17 +1,19 @@
 class QuestionsController < ApplicationController
-  before_action :find_question, only: %i[show, destroy]
-  before_action :find_test, only: %i[index, create]
+  before_action :find_question, only: [:destroy]
+  before_action :find_test, only: [:index, :create, :new]
 
   def index
-    
+
   end
 
   def show
-    
+    @question = Question.where(id: params[:id]).limit(1).first
+    render inline: "Question not found" if @question.blank?
   end
 
   def new
-    @question = Question.new
+    current_test = @test
+    @question = current_test.questions.new
   end
 
   def create
