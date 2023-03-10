@@ -14,7 +14,12 @@ class TestsController < ApplicationController
   end
 
   def create
-    redirect_to root_path if test = Test.create(tests_params)
+    @test = Test.new(tests_params)
+    if @test.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
