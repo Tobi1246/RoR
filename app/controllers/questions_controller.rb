@@ -1,10 +1,10 @@
 class QuestionsController < ApplicationController
-  before_action :find_question, only: [:destroy, :show]
-  before_action :find_test, only: [:index, :create, :new]
+  before_action :find_question, only: %i[destroy show]
+  before_action :find_test, only: %i[index create new]
 
-  def index;end
+  def index; end
 
-  def show;end
+  def show; end
 
   def new
     @question = @test.questions.new
@@ -37,5 +37,4 @@ class QuestionsController < ApplicationController
   def question_params
     params.require(:question).permit(:title)
   end
-
 end
