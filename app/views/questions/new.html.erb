@@ -1,13 +1,2 @@
 <h1>Create New Questions</h1>
-<%= form_with model: [@test, @question] do |f| %>
-  <% if @question.errors.any? %>
-  <ul>
-    <% @question.errors.full_messages.each do |message| %>
-      <li><%=  message %></li>
-    <% end %>
-    <ul>
-  <% end %>
-  <p><%= f.label :title, "Text question" %></p>
-  <p><%= f.text_area :title %></p>
-  <p><%= f.submit 'Create' %></p>
-<% end %>
+<%= render 'form_create&edit' %>
