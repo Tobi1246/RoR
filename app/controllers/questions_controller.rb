@@ -1,8 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :find_question, only: %i[destroy show edit update]
-  before_action :find_test, only: %i[index create new]
-
-  def index; end
+  before_action :find_test, only: %i[create new]
 
   def show; end
 
@@ -15,7 +13,7 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.build(question_params)
     if @question.save
-      redirect_to @question
+      redirect_to @question.test
     else
       render :new
     end
@@ -23,12 +21,12 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to test_questions_url(@question.test)
+    redirect_to @question.test
   end
 
   def update
     if @question.update(question_params)
-      redirect_to @question
+      redirect_to @question.test
     else
       render :edit
     end

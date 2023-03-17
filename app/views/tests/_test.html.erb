@@ -1,6 +1,6 @@
 <tr>
   <td><%= link_to test.title, test_url(test) %></td>
   <td><%= test_level(test) %></td>
-  <td><%= test.questions.pluck(:title) %></td>
-  <td><%= button_to "Show questions", test_questions_url(test), method: :get %></td>
+  <td> <%= test.questions.pluck(:title) %></td>
+  <td><%= button_to "Create new question", new_test_question_url(test), method: :get%></td>
 </tr>

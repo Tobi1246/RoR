@@ -4,5 +4,6 @@
 <div><%= button_to 'Edit question', edit_question_url(@question), method: :get%></div>
 <br><div><%= button_to 'Delete question', question_path(@question),
                                           method: :delete,
-                                          data:   { confirm: 'Accept?' } %></div>                                       
+                                          data:   { confirm: 'Accept?' } %></div>
+<br><div><%= button_to 'Back', @question.test, method: :get %></div>             
 <br><div><%= button_to 'Main page', root_path, method: :get %></div>

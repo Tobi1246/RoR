@@ -3,9 +3,10 @@
   <div class="three">
     <nav>
       <ul>
-        <li>Создано помощью ресурса :<a rel="nofollow" href="https://thinknetica.com/"target="_blank">Thinknetica<a></li>
-        <li>Author: Dmitry, linked git:<a rel="nofollow" href="https://github.com/Tobi1246"target="_blank">GitHub<a></li>
-        <p><%= Time.zone.now %></p>
+        <li>Создано помощью ресурса :<%= link_to "Thinknetica", 'https://thinknetica.com/' %></li>
+        <li>Author: Dmitry, linked GitHub: ( <%= link_to "author", 'https://github.com/Tobi1246' %> ,
+                                             <%= link_to "repo", "https://github.com/Tobi1246/testguru" %> )</li>    
+        <p><%= Time.current.year %></p>
       </ul>
     </nav>
   </div>
