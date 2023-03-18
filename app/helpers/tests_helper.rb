@@ -6,4 +6,8 @@ module TestsHelper
     TEST_LEVELS[test.level] || :hero
   end
 
+  def current_year
+    Time.current.year
+  end 
+
 end

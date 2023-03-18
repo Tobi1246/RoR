@@ -1,7 +1,7 @@
 <table>
   <tr>
     <th><%= question.title %> </th>
-    <th><%= button_to "Show", question_path(question), method: :get %></th>
-    <th><%= button_to 'Edit question', edit_question_url(question), method: :get%></th>
+    <th><%= link_to "Show", question_path(question), method: :get %></th>
+    <th><%= link_to 'Edit question', edit_question_url(question), method: :get%></th>
   </tr>
 </table>
