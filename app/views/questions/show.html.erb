@@ -1,4 +1,9 @@
 <h1>Test</h1>
 <p>Title: <%= @question.test.title %></p>
 <p>Question: <%= @question.title %></p>
-<div><%= button_to 'Delete question', question_path(@question), method: :delete %></div>
+<div><%= link_to 'Edit question', edit_question_url(@question), method: :get%></div>
+<br><div><%= button_to 'Delete question', question_path(@question),
+                                          method: :delete,
+                                          data:   { confirm: 'Accept?' } %></div>
+<br><div><%= link_to 'Back', @question.test, method: :get %></div>             
+<br><div><%= link_to 'Main page', root_path, method: :get %></div>
