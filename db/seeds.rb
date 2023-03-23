@@ -23,7 +23,10 @@ tests = Test.create!([{ title: 'Ruby', level: 1, author: users[0], category: cat
                       { title: 'SQL', level: 2, author: users[2], category: categorys[2] }])
 questions = Question.create!([{ title: 'What is object in Ruby', test: tests[0] },
                               { title: 'What is teg <li>', test: tests[1] },
-                              { title: 'How to multi merge tables', test: tests[2] }])
+                              { title: 'How to multi merge tables', test: tests[2] },
+                              { title: '1+1', test: tests[0] },
+                              { title: '2+2', test: tests[1] },
+                              { title: '3+3', test: tests[2] }])
 Answer.create!(question: questions[0],
                body: "Object is the default root of all Ruby objects.
               Object inherits from BasicObject which allows creating alternate object hierarchies.
@@ -36,3 +39,9 @@ Answer.create!(correct: false, question: questions[1], body: 'Create sort list')
 Answer.create!(question: questions[2], body: 'Usege JOIN  after constructions JOIN ON')
 Answer.create!(correct: false, question: questions[2], body: 'One usege JOIN and listing tables')
 Answer.create!(correct: false, question: questions[2], body: 'INNER JOIN')
+Answer.create!(question: questions[3], body: 2)
+Answer.create!(correct: false, question: questions[3], body: 3)
+Answer.create!(question: questions[4], body: 4)
+Answer.create!(correct: false, question: questions[4], body: 3)
+Answer.create!(question: questions[5], body: 6)
+Answer.create!(correct: false, question: questions[5], body: 3)
