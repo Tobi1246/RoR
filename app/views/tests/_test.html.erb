@@ -2,5 +2,6 @@
   <td><%= link_to test.title, test_url(test) %></td>
   <td><%= test_level(test) %></td>
   <td> <%= test.questions.pluck(:title) %></td>
-  <td><%= link_to "Create new question", new_test_question_url(test), method: :get%></td>
+  <td><%= link_to "Create new question", new_test_question_path(test) %></td>
+  <td><%= button_to "Start", start_test_path(test) %></td>
 </tr>
