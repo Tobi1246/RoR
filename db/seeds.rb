@@ -8,7 +8,6 @@
 
 Answer.destroy_all
 Question.destroy_all
-TestUser.destroy_all
 Test.destroy_all
 Category.destroy_all
 User.destroy_all
@@ -37,7 +36,3 @@ Answer.create!(correct: false, question: questions[1], body: 'Create sort list')
 Answer.create!(question: questions[2], body: 'Usege JOIN  after constructions JOIN ON')
 Answer.create!(correct: false, question: questions[2], body: 'One usege JOIN and listing tables')
 Answer.create!(correct: false, question: questions[2], body: 'INNER JOIN')
-TestUser.create!([{ test: tests[0], user: users[0] },
-                  { test: tests[1], user: users[1] },
-                  { test: tests[2], user: users[1] },
-                  { test: tests[2], user: users[2] }])
