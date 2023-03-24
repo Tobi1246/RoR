@@ -26,6 +26,14 @@ class TestPassage < ApplicationRecord
     end
   end
 
+  def result
+    if color_result == "win"
+      "UR COMPLEED TEST"
+    else
+      "UR FALED TEST"
+    end
+  end
+
   def current_question_number
     count_questions - test.questions.order(:id).where('id > ?', current_question.id).count
   end

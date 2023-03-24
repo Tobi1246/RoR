@@ -1,3 +1,4 @@
 <p>Test completed</p>
 <p class=<%= @test_passage.color_result %>> You typed <%= @test_passage.test_result %> score</p>
+<p class=<%= @test_passage.color_result %>><%= @test_passage.result %></p>
 <%= link_to 'Back to all tests', root_path %>
