@@ -6,8 +6,7 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :before_validation_set_first_question, on: :create
-  before_validation :before_validation_set_next_question, on: :update
+  before_validation :before_validation_set_current_question
 
   def completed?
     current_question.nil?
@@ -18,38 +17,24 @@ class TestPassage < ApplicationRecord
     save!
   end
 
-  def color_result
-    if test_result >= RESPONSE_SUCCESS_RATE
-      "win" 
-    else
-      "lose"
-    end
-  end
-
-  def result
-    if color_result == "win"
-      "UR COMPLEED TEST"
-    else
-      "UR FALED TEST"
-    end
+  def completed_test?
+    point_question >= RESPONSE_SUCCESS_RATE
   end
 
   def current_question_number
     count_questions - test.questions.order(:id).where('id > ?', current_question.id).count
   end
 
-  def test_result
-    point_question
+  def point_question
+    (self.correct_questions * 100) / count_questions
   end
 
   private
 
-  def before_validation_set_next_question
-    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
-  end
+  def before_validation_set_current_question
+    return self.current_question = test.questions.first if current_question.nil?
 
-  def before_validation_set_first_question
-    self.current_question = test.questions.first if test.present?  
+    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
   end
 
   def correct_answer?(answer_ids)
@@ -58,10 +43,6 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.correct 
-  end
-
-  def point_question
-    (self.correct_questions * 100) / count_questions
   end
 
   def count_questions
