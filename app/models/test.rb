@@ -2,9 +2,9 @@ class Test < ApplicationRecord
   belongs_to :author, class_name: 'User'
   belongs_to :category
 
-  has_many :test_users
-  has_many :users, through: :test_users, dependent: :destroy
   has_many :questions, dependent: :destroy
+  has_many :test_passages
+  has_many :users, through: :test_passages, dependent: :destroy
 
   validates :level, numericality: { onle_integer: true, greater_than_or_equal_to: 0,
                                                         less_than_or_equal_to: 3 }, presence: true
