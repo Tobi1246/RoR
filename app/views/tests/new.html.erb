@@ -1,6 +1,6 @@
 <h1>Create New Test</h1>
 
-<%= form_with model: @test, local: true, format: :js do |f| %>
+<%= form_with model: @test, local: true, data: { turbo: false } do |f| %>
   <%= render 'shared/errors', recource: @test %>
 
   <p><%= f.label :title, "Test title" %></p>

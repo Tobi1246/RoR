@@ -12,9 +12,9 @@ Test.destroy_all
 Category.destroy_all
 User.destroy_all
 
-users = User.create!([{ firstname: 'Lion', lastname: 'Di', age: 18, email: "test@user1" },
-                      { firstname: 'Tod', lastname: 'Darck', age: 48, email: "test@user2" },
-                      { firstname: 'Joi', lastname: 'Brain', age: 27, email: "test@user3" }])
+users = User.create!([{ firstname: 'Lion', lastname: 'Di', age: 18, email: "test@user1", password_digest: 123 },
+                      { firstname: 'Tod', lastname: 'Darck', age: 48, email: "test@user2", password_digest: 123 },
+                      { firstname: 'Joi', lastname: 'Brain', age: 27, email: "test@user3", password_digest: 123 }])
 categorys = Category.create!([{ title: 'Ruby' },
                               { title: 'HTML' },
                               { title: 'SQL' }])
