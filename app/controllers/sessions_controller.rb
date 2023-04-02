@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  skip_before_action :authenticate_user!
+
   def new
 
   end
@@ -11,9 +13,14 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to tests_path
     else
-      flash[:alert] = 'Are you a Guru? Verify your Emald and Password pleas'
+      flash.now[:alert] = 'Are you a Guru? Verify your Emald and Password pleas'
       render :new
     end
+  end
+
+  def destroy
+   quit if login?
+   redirect_to root_url
   end
 
 end

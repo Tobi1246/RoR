@@ -1,22 +1,28 @@
 class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
-  helper_method :corrent_user
+  include SessionsHelper
+
+  before_action :authenticate_user!
+
+  helper_method :current_user,
+                :login_in?
 
   private
 
   def authenticate_user!
-    unless corrent_user
-      redirect_to login_path
+    unless current_user
+      redirect_to login_path, alert: 'Are you a Guru? Verify your Emald and Password pleas'
     end
+
   end
 
   def login_in?
-    corrent_user.present?
+    current_user.present?
   end
 
-  def corrent_user
-    @corrent_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+  def current_user
+    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
   def record_not_found

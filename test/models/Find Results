@@ -1,0 +1,10 @@
+Searching 157 files for "test_passege"
+
+~/testguru/app/models/user.rb:
+   13    validates :email, presence: true, uniqueness: true
+   14  
+   15:   def test_passage(test)
+   16      test_passages.order(id: :desc).find_by(test_id: test.id)
+   17    end
+
+1 match in 1 file
