@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get :singup, to: 'users#new'
   get :login, to: 'sessions#new'
+
   delete :quit, to: 'sessions#destroy'
 
   resources :users, only: :create

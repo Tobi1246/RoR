@@ -12,14 +12,16 @@
 
   <body>
 
-    <% if @current_user.present? %>
-      <p class="nav user">Welcom,<b><%= current_user.firstname %></b> <%= link_to 'Guru', root_path %></p>
-      <p class="nav user"><%= link_to 'Quit', quit_path, method: :delete %></p> 
-    <% end %> 
+    <%= render 'layouts/nav' %>
 
-    <% if @current_user.nil? %>
-      <p class="nav user"><%= link_to 'Login', login_path %> <%= link_to 'Singup', singup_path %></p> 
-    <% end %> 
+    <% flash.each do |name, message| %>
+      <div class="flash">
+        <div class="<%= alert_message_class(name) %>">
+          <%= message %>
+        </div>
+      </div>
+    <% end %>
+
 
     <%= yield %>
     <%= render 'layouts/footer' %>

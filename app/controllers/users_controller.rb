@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login(@user)
-      redirect_to tests_path
+      redirect_to tests_path, success: "Your create account!"
     else
       render :new
     end

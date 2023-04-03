@@ -6,7 +6,10 @@ module SessionsHelper
 
   def quit
    session.delete(:user_id)
-   @current_user = nil
+  end
+
+  def login?
+    !current_user.nil?
   end
 
 end

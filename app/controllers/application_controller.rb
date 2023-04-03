@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+
+  add_flash_types :success
+
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   include SessionsHelper
@@ -12,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
-      redirect_to login_path, alert: 'Are you a Guru? Verify your Emald and Password pleas'
+      redirect_to login_path
     end
 
   end

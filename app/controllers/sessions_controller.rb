@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to tests_path
+      redirect_to path_after_login, success: 'Welcom back!'
     else
       flash.now[:alert] = 'Are you a Guru? Verify your Emald and Password pleas'
       render :new
@@ -20,7 +20,10 @@ class SessionsController < ApplicationController
 
   def destroy
    quit if login?
-   redirect_to root_url
+   redirect_to root_url, notice: "Your quit in account"
   end
 
+  def path_after_login
+    cookies[:return_to] || root_path
+  end
 end
