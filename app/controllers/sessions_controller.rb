@@ -19,11 +19,12 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-   quit if login?
+   quit 
    redirect_to root_url, notice: "Your quit in account"
   end
 
   def path_after_login
     cookies[:return_to] || root_path
+    cookies.delete :return_to
   end
 end

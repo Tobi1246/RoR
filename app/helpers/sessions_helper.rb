@@ -8,8 +8,4 @@ module SessionsHelper
    session.delete(:user_id)
   end
 
-  def login?
-    !current_user.nil?
-  end
-
 end

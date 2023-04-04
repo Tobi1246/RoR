@@ -15,9 +15,13 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
+      retorn_to_cookies
       redirect_to login_path
     end
+  end
 
+  def retorn_to_cookies
+    cookies[:return_to] = request.url
   end
 
   def login_in?
