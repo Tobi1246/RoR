@@ -5,7 +5,16 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+
   root  to: "tests#index"
+
+  get :singup, to: 'users#new'
+  get :login, to: 'sessions#new'
+
+  delete :quit, to: 'sessions#destroy'
+
+  resources :users, only: :create
+  resources :sessions, only: :create
 
   resources :tests do
     resources :questions, except: :index, shallow: true do

@@ -1,4 +1,5 @@
 class TestsController < ApplicationController
+
   before_action :find_test, only: %i[show start]
 
   def index
@@ -21,9 +22,8 @@ class TestsController < ApplicationController
   end
 
   def start
-    @user = User.first
-    @user.tests.push(@test)
-    redirect_to @user.test_passage(@test)
+    @current_user.tests.push(@test)
+    redirect_to current_user.test_passage(@test), success: "Your started test"
   end
 
   private

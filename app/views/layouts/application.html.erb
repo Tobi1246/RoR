@@ -11,6 +11,18 @@
   </head>
 
   <body>
+
+    <%= render 'layouts/nav' %>
+
+    <% flash.each do |name, message| %>
+      <div class="flash">
+        <div class="<%= alert_message_class(name) %>">
+          <%= message %>
+        </div>
+      </div>
+    <% end %>
+
+
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

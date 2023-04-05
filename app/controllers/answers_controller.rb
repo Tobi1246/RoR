@@ -13,7 +13,7 @@ class AnswersController < ApplicationController
   def create
     @answer = @question.answers.new(answer_params)
     if @answer.save
-      redirect_to @answer
+      redirect_to @answer, success: 'Answer create!'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class AnswersController < ApplicationController
 
   def destroy
     @answer.destroy
-    redirect_to @answer.question
+    redirect_to @answer.question, alert: "Answer has bin deleted"
   end
 
   private

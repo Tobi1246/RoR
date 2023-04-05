@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  
   before_action :find_question, only: %i[destroy show edit update]
   before_action :find_test, only: %i[create new]
 
@@ -13,7 +14,7 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.build(question_params)
     if @question.save
-      redirect_to @question
+      redirect_to @question, notice: 'Your create question!'
     else
       render :new
     end
@@ -21,7 +22,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to @question.test
+    redirect_to @question.test, alert: "Question has bin deleted"
   end
 
   def update

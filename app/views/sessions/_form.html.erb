@@ -1,0 +1,11 @@
+<%= form_with url: sessions_path, data: { turbo: false }, local: true do |f| %>
+
+  <p><%= f.label :email%></p>
+  <p><%= f.text_field :email, id: :email %></p>
+
+
+  <p><%= f.label :password %></p>
+  <p><%= f.password_field :password, id: :password %></p>
+
+  <p><%= f.submit 'Enter' %></p>
+<% end %>
