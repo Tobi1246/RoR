@@ -1,4 +1,11 @@
 module ApplicationHelper
+
+  HASH_ALERT_MESSAGE = {
+                         alert: 'message-alert',
+                         notice: 'message-notice',
+                         success: 'message-success'
+                        }.freeze
+
   def author_github_link
     link_to "author", 'https://github.com/Tobi1246'
   end
@@ -8,10 +15,6 @@ module ApplicationHelper
   end
 
   def alert_message_class(name)
-    {
-      alert: 'message-alert',
-      notice: 'message-notice',
-      success: 'message-success'
-    }[name.to_sym] || name
+    HASH_ALERT_MESSAGE[name.to_sym] || name
   end
 end
