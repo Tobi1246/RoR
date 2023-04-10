@@ -12,10 +12,9 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def admin?(current_user)
-    current_user.type == 'Admin'
+  def after_sign_in_path_for(resource)
+    current_user.is_a?(Admin) ? admin_tests_path : tests_path
   end
-
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:firstname, :lastname])
