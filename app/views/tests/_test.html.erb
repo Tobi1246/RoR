@@ -1,7 +1,6 @@
 <tr>
-  <td><%= link_to test.title, test_url(test) %></td>
+  <td><%= test.title %></td>
   <td><%= test_level(test) %></td>
-  <td> <%= test.questions.pluck(:title) %></td>
-  <td><%= link_to "Create new question", new_test_question_path(test) %></td>
+  <td> <%= test.questions.count %></td>
   <td><%= button_to "Start", start_test_path(test) %></td>
 </tr>

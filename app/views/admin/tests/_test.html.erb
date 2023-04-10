@@ -1,0 +1,8 @@
+<tr>
+  <td><%= link_to test.title, admin_test_path(test) %></td>
+  <td><%= test_level(test) %></td>
+  <td> <%= test.questions.pluck(:title) %></td>
+  <td><%= link_to "Create new question", new_admin_test_question_path(test) %></td>
+  <td><%= button_to "Delete", admin_test_path(test),
+                              method: :delete %></td>
+</tr>

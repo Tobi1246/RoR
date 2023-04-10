@@ -11,10 +11,11 @@ Question.destroy_all
 Test.destroy_all
 Category.destroy_all
 User.destroy_all
+Admin.destroy_all
 
-users = User.create!([{ firstname: 'Lion', lastname: 'Di', age: 18, email: "test@user1", password_digest: 123 },
-                      { firstname: 'Tod', lastname: 'Darck', age: 48, email: "test@user2", password_digest: 123 },
-                      { firstname: 'Joi', lastname: 'Brain', age: 27, email: "test@user3", password_digest: 123 }])
+users = User.create!([{ firstname: 'Lion', lastname: 'Di', age: 18, email: "test@user1", password: 123 },
+                      { firstname: 'Tod', lastname: 'Darck', age: 48, email: "test@user2", password: 123 },
+                      { firstname: 'Joi', lastname: 'Brain', age: 27, email: "test@user3", password: 123 }])
 categorys = Category.create!([{ title: 'Ruby' },
                               { title: 'HTML' },
                               { title: 'SQL' }])
@@ -48,3 +49,4 @@ Answer.create!(correct: false, question: questions[5], body: 3)
 TestPassage.create!([{test: tests[0], user: users[0]},
                      {test: tests[1], user: users[1]},
                      {test: tests[2], user: users[2]}]) 
+Admin.create!(firstname: 'Tobi', email: 'asd@ya.ru', password: 'admin123')
