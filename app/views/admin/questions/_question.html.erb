@@ -1,0 +1,7 @@
+<table>
+  <tr>
+    <th><%= question.title %> </th>
+    <th><%= link_to "Show", admin_question_path(question), method: :get %></th>
+    <th><%= link_to 'Edit question', edit_admin_question_url(question), method: :get%></th>
+  </tr>
+</table>

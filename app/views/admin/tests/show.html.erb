@@ -1,0 +1,5 @@
+<h1>Test</h1>
+<p>Title: <%= @test.title %></p>
+<p>Questions:</p>
+<%= render @test.questions %>
+<p><%=  link_to "All test", admin_tests_path, method: :get %></p>

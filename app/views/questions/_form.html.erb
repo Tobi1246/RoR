@@ -1,7 +1,0 @@
-<%= form_with model: [@test, @question], data: { turbo: false }, local: true do |f| %>
-  <%= render 'shared/errors', recource: @question %>
-
-  <p><%= f.label :title, "Text question" %></p>
-  <p><%= f.text_area :title %></p>
-  <p><%= f.submit 'Confirm' %></p>
-<% end %>

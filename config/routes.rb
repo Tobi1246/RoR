@@ -1,25 +1,11 @@
 Rails.application.routes.draw do
   
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
+  devise_for :users, path: :gurus, controllers: { sessions: 'users/sessions' },
+                                   path_names: { sign_in: :login, sign_out: :quit }
 
   root  to: "tests#index"
 
-  get :singup, to: 'users#new'
-  get :login, to: 'sessions#new'
-
-  delete :quit, to: 'sessions#destroy'
-
-  resources :users, only: :create
-  resources :sessions, only: :create
-
-  resources :tests do
-    resources :questions, except: :index, shallow: true do
-      resources :answers, except: :index, shallow: true
-    end
+  resources :tests, only: :index do
     member do
       post :start
     end
@@ -28,6 +14,14 @@ Rails.application.routes.draw do
   resources :test_passages, only: %i[show update] do
     member do
       get :result
+    end
+  end
+
+  namespace :admin do
+    resources :tests do
+      resources :questions, except: :index, shallow: true do
+        resources :answers, except: :index, shallow: true
+      end
     end
   end
 

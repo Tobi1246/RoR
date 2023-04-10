@@ -1,0 +1,14 @@
+<h1>Test</h1>
+<p>Title: <%= @question.test.title %></p>
+<p>Question: <%= @question.title %></p>
+<h2>Answers</h2>
+<%= link_to 'New answer', new_admin_question_answer_path(@question) %>
+<ol>
+  <%= render @question.answers %>
+</ol>
+<div><%= link_to 'Edit question', edit_admin_question_path(@question), method: :get%></div>
+<br><div><%= button_to 'Delete question', admin_question_path(@question),
+                                          method: :delete,
+                                          data:   { confirm: 'Accept?' } %></div>
+<br><div><%= link_to 'Back', admin_test_path(@question.test), method: :get %></div>             
+<br><div><%= link_to 'Main page', admin_tests_path, method: :get %></div>

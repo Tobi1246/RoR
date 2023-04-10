@@ -1,9 +1,0 @@
-<%= form_with model: [@question ,@answer], local: true do |f| %>
-  <%= render 'shared/errors', recource: @answer %>
-
-  <p><%= f.label :body, "Text answer" %></p>
-  <p><%= f.text_area :body, rows: 7, cols: 60 %></p>
-  <p><%= f.label :correct %></p>
-  <p><%= f.check_box :correct %></p>
-  <p><%= f.submit 'Confirm' %></p>
-<% end %>

@@ -8,4 +8,9 @@
   
   <%= render @tests %>
 </table>
-<br><dev><%= link_to "Create new test", new_test_url, method: :get %></dev>
+
+<h1>
+<% if current_user.is_a?(Admin) %>
+  <%= link_to'Admin page', admin_tests_path %>
+<% end %>
+</h1>

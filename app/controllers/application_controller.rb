@@ -4,32 +4,20 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
-  include SessionsHelper
-
   before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   helper_method :current_user,
                 :login_in?
 
   private
 
-  def authenticate_user!
-    unless current_user
-      retorn_to_cookies
-      redirect_to login_path
-    end
+  def after_sign_in_path_for(resource)
+    current_user.is_a?(Admin) ? admin_tests_path : tests_path
   end
 
-  def retorn_to_cookies
-    cookies[:return_to] = request.url
-  end
-
-  def login_in?
-    current_user.present?
-  end
-
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:firstname, :lastname])
   end
 
   def record_not_found
