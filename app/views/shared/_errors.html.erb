@@ -1,10 +1,10 @@
   <% if recource.errors.any? %>
     <div>
-      <h2><%= pluralize(recource.errors.count, 'eror') %> detected:</h2>
+      <h2><%= t('.header', count: recource.errors.count) %>:</h2>
 
-      <ul>
+      <ul class="message">
         <% recource.errors.full_messages.each do |message| %>
-          <li><%=  message %></li>
+          <li class="message-alert"><%=  message %></li>
         <% end %>
       </ul>
     </div>

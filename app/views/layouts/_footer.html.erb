@@ -3,8 +3,11 @@
     <nav>
       <ul>
         <li>Создано помощью ресурса :<%= link_to "Thinknetica", 'https://thinknetica.com/' %></li>
-        <li>Author: Dmitry, linked GitHub: ( <%= author_github_link %> , <%= repo_app_link %> )</li>    
+        <li>Author: Dmitry, linked GitHub: ( <%= author_github_link %> , <%= repo_app_link %> )</li>   
         <p><%= current_year %></p>
       </ul>
     </nav>
+  </div>
+  <p class='nine', align="center"><%= t('.lang') %>
+  <br><%= link_to 'ru', "/?lang=ru" %> <%= link_to 'en', '/?lang=en' %></p> 
 </footer>

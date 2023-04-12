@@ -1,6 +1,6 @@
-<h1>Passing the <%= @test_passage.test.title %> Test</h1>
+<h1><%= t('.title') %> <%= @test_passage.test.title %><%= t('.title2') %></h1>
 
-<p>Question <%= @test_passage.current_question_number %>/<%= @test_passage.test.questions.count %></p>
+<p><%= t('.question_number') %> <%= @test_passage.current_question_number %>/<%= @test_passage.test.questions.count %></p>
 <b><%= @test_passage.current_question.title %></b>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, data: { turbo: false }, method: :put do |f| %>
@@ -10,5 +10,5 @@
       <%= b.label %>
     </p>
   <% end %>
-  <p><%= f.submit 'Next' %></p>
+  <p><%= f.submit t('.next') %></p>
 <% end %>

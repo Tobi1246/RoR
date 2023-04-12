@@ -10,7 +10,7 @@ class TestsController < ApplicationController
 
   def start
     current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test), success: "Your started test"
+    redirect_to current_user.test_passage(@test), success: t('.start_massege')
   end
 
   private

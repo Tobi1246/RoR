@@ -1,0 +1,80 @@
+ru: 
+  hello: "Привет мир"
+
+  users:
+    sessions:
+      create:
+        notice: "Добро пожаловать "  
+
+  helpers:
+    select:
+      prompt: "Выберите"
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+
+  tests:
+    start:
+      start_massege: "Вы начали прохождение теста!"
+    test:
+      start: "Начать тест"
+    index:
+      test_title: "Название"
+      test_level: "Уровень"
+      question_title: "Вопросы"
+      header: "Тесты"
+
+  test_passages:
+    show:
+      title: "Прохождение теста"
+      title2: ""
+      question_number: "Вопросы"
+      next: "Далее"
+    result:
+      header: "Тест %{title} успешно завершён!"
+      all_tests: "Вернуться ко всем тестам"
+      score: "Вы набрали"
+
+  admin:
+    tests:
+      test:
+        delete_test: "Удалить тест"
+        create_question: "Создать новый вопрос"
+      new:
+        back: "Назад"
+        header: "Создать новый тест"   
+      destroy:
+        alert: "Тест удалён"
+      create:
+        success: "Тест успешно создан"
+      index:
+        test_title: "Название"
+        test_level: "Уровень"
+        question_title: "Вопросы"
+        create_test: "Создать новый тест"
+        header: "Тесты"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
+  layouts:
+    nav:
+      hello: "Добро пожаловать"
+      log_out: "Выход"
+    footer:
+      lang: "Выберите язык"

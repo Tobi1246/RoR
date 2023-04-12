@@ -1,6 +1,8 @@
 .message {
-  border: 1px solid #d0d0d0;
+  border: 2px solid #d0d0d0;
   padding: 10px 15px;
+  border-radius: 5px;
+  width: 500px;
 }
 .message-notice {
   background-color: #ed05c6;
