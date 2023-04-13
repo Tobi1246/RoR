@@ -32,3 +32,16 @@
   grid-column: 3;
   grid-row: 4;
 }
+.nine {
+  grid-column: 5;
+  grid-row: 5;  
+}
+
+.box {
+    position:relative;
+}
+.bet_time {
+    position:absolute;
+    bottom:0;
+    right:0;
+}

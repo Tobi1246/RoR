@@ -15,7 +15,7 @@ class Admin::TestsController < Admin::BaseController
   def create
     @test = current_user.created_tests.build(tests_params)
     if @test.save
-      redirect_to admin_tests_path(@test)
+      redirect_to admin_tests_path(@test), success: t('.success')
     else
       render :new
     end
@@ -23,7 +23,7 @@ class Admin::TestsController < Admin::BaseController
 
   def destroy
     @test.destroy
-    redirect_to admin_tests_path, alert: "Test has bin deleted"
+    redirect_to admin_tests_path, alert: t('.alert')
   end
 
   private
