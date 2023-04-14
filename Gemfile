@@ -18,6 +18,10 @@ gem "puma", "~> 5.0"
 # LOCALIZATION
 gem 'rails-i18n'
 
+# STYLING
+gem 'bootstrap'
+gem 'jquery-rails'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 

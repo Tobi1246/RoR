@@ -2,6 +2,9 @@ ru:
   activerecord:
     models:
       test: "Тест"
+      category: "Категория"
+      answer: "Ответ"
+      question: "Вопрос"
 
     attributes:
       test:
@@ -9,6 +12,8 @@ ru:
         level: "Уровень"
         category_id: "Категория"
         author_id: "Автор"
+      category:
+        title: "Категория"
 
     errors:
       messages:

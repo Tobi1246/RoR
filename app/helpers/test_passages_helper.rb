@@ -10,20 +10,20 @@ module TestPassagesHelper
 
   def locale_ru(test_passage)
     if test_passage.completed_test?
-      "<p class='win'> Вы набрали #{test_passage.point_question} очков
+      "<p class='alert alert-success row justify-content-center mt-3'> Вы набрали #{test_passage.point_question} очков
       <br>ВЫ ПРОШЛИ ТЕСТ</p>".html_safe 
     else
-      "<p class='lose'> You typed #{test_passage.point_question } score
+      "<p class='alert alert-danger row justify-content-center mt-3'> You typed #{test_passage.point_question } score
       <br>ВЫ ПРОВАЛИЛИ ТЕСТ</p>".html_safe
     end
   end
 
   def locale_en(test_passage)
     if test_passage.completed_test?
-      "<p class='win'> You typed #{test_passage.point_question} score
+      "<p class='alert alert-success row justify-content-center mt-3'> You typed #{test_passage.point_question} score
       <br>UR COMPLED TEST</p>".html_safe 
     else
-      "<p class='lose'> You typed #{test_passage.point_question } score
+      "<p class='alert alert-danger row justify-content-center mt-3'> You typed #{test_passage.point_question } score
       <br>UR FALED TEST</p>".html_safe
     end
   end

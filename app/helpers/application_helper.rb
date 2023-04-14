@@ -1,9 +1,9 @@
 module ApplicationHelper
 
   HASH_ALERT_MESSAGE = {
-                         alert: 'message-alert',
-                         notice: 'message-notice',
-                         success: 'message-success'
+                         alert: 'alert alert-danger',
+                         success: 'alert alert-success',
+                         notice: 'alert alert-primary'
                         }.freeze
 
   def author_github_link

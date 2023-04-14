@@ -2,9 +2,9 @@
     <div>
       <h2><%= t('.header', count: recource.errors.count) %>:</h2>
 
-      <ul class="message">
+      <ul>
         <% recource.errors.full_messages.each do |message| %>
-          <li class="message-alert"><%=  message %></li>
+          <li class="alert alert-danger"><%=  message %></li>
         <% end %>
       </ul>
     </div>

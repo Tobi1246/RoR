@@ -12,6 +12,8 @@ en:
         create: "Create test"
         update: "Update test"
     label:
+      question:
+        title: "Text question"
       test:
         title: "Title"
         level: "Level"
@@ -46,6 +48,8 @@ en:
 
   admin:
     tests:
+      form:
+        create_test: "Create test"
       test:
         delete_test: "Deleted test"
         create_question: "Create new question"
@@ -62,6 +66,16 @@ en:
         question_title: "Questions"
         create_test: "Create new test"
         header: "Tests"
+    questions:
+      form:
+        create_question: "Create question"
+    answers:
+      show:
+        delete_answer: "Delete answer"
+        edit: "Edit"
+        back: "Back"      
+      form:
+        create_answer: "Create answer"        
 
   tests_mailer:
     completed_test:

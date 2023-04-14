@@ -3,7 +3,11 @@
 
   <p><%= f.label :body, "Text answer" %></p>
   <p><%= f.text_area :body, rows: 7, cols: 60 %></p>
-  <p><%= f.label :correct %></p>
-  <p><%= f.check_box :correct %></p>
-  <p><%= f.submit 'Confirm' %></p>
+                <div class="form-check">
+                <%= f.label :correct, class: 'form-check-label' do %>
+                  <%= f.check_box :correct, class: 'form-check-imput' %>
+                  Correct
+                <% end %>
+              </div>
+  <p><%= f.submit t('.create_answer'), class: "btn btn-outline-success" %></p>
 <% end %>
