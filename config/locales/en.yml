@@ -45,6 +45,9 @@ en:
     result:
       header: "The %{title} Test was completed!"
       all_tests: "Back to all tests"
+    gist: 
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"      
 
   admin:
     tests:

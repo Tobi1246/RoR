@@ -50,6 +50,9 @@ ru:
       header: "Тест %{title} успешно завершён!"
       all_tests: "Вернуться ко всем тестам"
       score: "Вы набрали"
+    gist: 
+      success: "Gist успешно сохранёт!"
+      failure: "Во время созранения gist произошла ошибка"
 
   admin:
     tests:
