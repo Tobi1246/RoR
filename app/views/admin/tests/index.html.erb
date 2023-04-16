@@ -1,11 +1,14 @@
 <h1><%= t('.header') %></h1>
-<table>
+<table class="table">
   <tr>
     <th><%= t('.test_title') %></th>
     <th><%= t('.test_level') %></th>
     <th><%= t('.question_title') %></th>
   </tr>
-  
-  <%= render @tests %>
+  <tbody class="table-group-divider">
+    <%= render @tests %>
+  </tbody>
 </table>
-<br><dev><%= link_to t('.create_test'), new_admin_test_path, method: :get %></dev>
+  
+</table>
+<br><dev><%= link_to t('.create_test'), new_admin_test_path, class: "btn btn-outline-primary", method: :get %></dev>

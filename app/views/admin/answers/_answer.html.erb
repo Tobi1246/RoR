@@ -1,9 +1,10 @@
-<li>
+<li class="table">
   <%= answer.body %>
-  <%= link_to 'Show', admin_answer_path(answer) %>
-  <%= link_to 'Edit', edit_admin_answer_path(answer) %>
+  <%= link_to 'Show', admin_answer_path(answer), class: "btn btn-outline-primary" %>
+  <%= link_to 'Edit', edit_admin_answer_path(answer), class: "btn btn-outline-warning" %>
   <%= button_to 'Delete',
-              admin_answer_path(answer),             
+              admin_answer_path(answer),
+              class: "btn btn-outline-danger",             
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
 </li>

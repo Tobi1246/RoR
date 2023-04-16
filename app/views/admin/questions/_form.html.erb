@@ -1,7 +1,7 @@
 <%= form_with model: [:admin, @test, @question], data: { turbo: false }, local: true do |f| %>
   <%= render 'shared/errors', recource: @question %>
 
-  <p><%= f.label :title, "Text question" %></p>
+  <p><%= f.label :title %></p>
   <p><%= f.text_area :title %></p>
-  <p><%= f.submit 'Confirm' %></p>
+  <%= f.submit t('.create_question'), class: "btn btn-outline-info" %>
 <% end %>

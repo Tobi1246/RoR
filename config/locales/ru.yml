@@ -14,6 +14,8 @@ ru:
         create: "Создать тест"
         update: "Обновить тест"
     label:
+      question:
+        title: "Текст вопроса"
       test:
         title: "Название"
         level: "Уровень"
@@ -35,7 +37,7 @@ ru:
     index:
       test_title: "Название"
       test_level: "Уровень"
-      question_title: "Вопросы"
+      question_title: "Вопросов"
       header: "Тесты"
 
   test_passages:
@@ -51,6 +53,8 @@ ru:
 
   admin:
     tests:
+      form:
+        create_test: "Создать тест"
       test:
         delete_test: "Удалить тест"
         create_question: "Создать новый вопрос"
@@ -67,6 +71,16 @@ ru:
         question_title: "Вопросы"
         create_test: "Создать новый тест"
         header: "Тесты"
+    questions:
+      form:
+        create_question: "Создать вопрос"
+    answers:
+      show:
+        delete_answer: "Удалить ответ"
+        edit: "Изменить"
+        back: "Назад"
+      form:
+        create_answer: "Создать ответ"           
 
   tests_mailer:
     completed_test:
