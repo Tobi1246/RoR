@@ -38,6 +38,7 @@ en:
 
   test_passages:
     show:
+      gist: "Gist Question"
       title: "Passing the"
       title2: " test"
       question_number: "Questions"
@@ -45,11 +46,17 @@ en:
     result:
       header: "The %{title} Test was completed!"
       all_tests: "Back to all tests"
-    gist: 
-      success: "Gist was successfully created!"
+    gist:
+      gist_link: "link"  
+      success: "Gist was successfully created, %{link}!"
       failure: "An error occurred while saving gist"      
 
   admin:
+    gists:
+      index:
+        user: "User"
+        url: "Link"
+        question: "Question"    
     tests:
       form:
         create_test: "Create test"
@@ -90,3 +97,5 @@ en:
       log_out: "Quit"
     footer:
       lang: "Select lang"
+
+  description: "A question about  %{test_title} from TestGuru"  

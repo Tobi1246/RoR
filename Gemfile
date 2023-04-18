@@ -17,6 +17,12 @@ gem "puma", "~> 5.0"
 
 gem 'faraday'
 
+gem "octokit", "~> 5.0"
+
+gem 'sawyer'
+
+gem 'dotenv-rails'
+
 # LOCALIZATION
 gem 'rails-i18n'
 
