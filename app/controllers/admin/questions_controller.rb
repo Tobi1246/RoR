@@ -1,5 +1,4 @@
 class Admin::QuestionsController < Admin::BaseController
-  
   before_action :find_question, only: %i[destroy show edit update]
   before_action :find_test, only: %i[create new]
 
@@ -22,7 +21,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def destroy
     @question.destroy
-    redirect_to admin_test_path(@question.test), alert: "Question has bin deleted"
+    redirect_to admin_test_path(@question.test), alert: 'Question has bin deleted'
   end
 
   def update

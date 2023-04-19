@@ -17,8 +17,6 @@ gem "puma", "~> 5.0"
 
 gem "octokit", "~> 5.0"
 
-gem 'dotenv-rails', groups: [:development, :test]
-
 # LOCALIZATION
 gem 'rails-i18n'
 
@@ -63,6 +61,7 @@ gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'dotenv-rails'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

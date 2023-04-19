@@ -1,5 +1,4 @@
 class Admin::TestsController < Admin::BaseController
-
   before_action :find_test, only: %i[show destroy]
 
   def index

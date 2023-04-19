@@ -1,5 +1,4 @@
 class TestsController < ApplicationController
-
   before_action :find_test, only: %i[show start]
 
   def index
@@ -18,5 +17,4 @@ class TestsController < ApplicationController
   def find_test
     @test = Test.find(params[:id])
   end
-  
 end
