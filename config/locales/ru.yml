@@ -51,7 +51,9 @@ ru:
       header: "Тест %{title} успешно завершён!"
       all_tests: "Вернуться ко всем тестам"
       score: "Вы набрали"
-    gist:
+
+  gists:
+    create:
       gist_link: "ссылка" 
       success: "Gist успешно создан, %{link}!"
       failure: "Во время созранения gist произошла ошибка"
@@ -63,6 +65,7 @@ ru:
         user: "Пользователь"
         url: "Ссылка"
         question: "Вопрос"
+        date_create: "Дата создания"
     tests:
       form:
         create_test: "Создать тест"

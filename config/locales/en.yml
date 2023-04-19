@@ -46,17 +46,21 @@ en:
     result:
       header: "The %{title} Test was completed!"
       all_tests: "Back to all tests"
-    gist:
+
+  gists:
+    create:
       gist_link: "link"  
       success: "Gist was successfully created, %{link}!"
-      failure: "An error occurred while saving gist"      
+      failure: "An error occurred while saving gist"        
 
   admin:
     gists:
       index:
+        email: "Email"
         user: "User"
         url: "Link"
-        question: "Question"    
+        question: "Question"
+        date_create: "Date created"   
     tests:
       form:
         create_test: "Create test"

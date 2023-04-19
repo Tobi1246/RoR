@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 
   add_flash_types :success
+  #protect_from_forgery prepend:true
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 

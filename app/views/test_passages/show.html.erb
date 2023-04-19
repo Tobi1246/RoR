@@ -11,6 +11,7 @@
     </p>
   <% end %>
 
-  <p><%= link_to t('.gist'), gist_test_passage_path(@test_passage), class: "btn btn-outline-primary", method: :post %></p>
+ 
   <p><%= f.submit t('.next'), class: "btn btn-outline-dark" %></p>
 <% end %>
+ <p><%= button_to t('.gist'), gist_test_passage_path(@test_passage), class: "btn btn-outline-primary", method: :post %></p>
