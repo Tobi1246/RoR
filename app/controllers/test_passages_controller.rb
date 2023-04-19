@@ -2,7 +2,6 @@ class TestPassagesController < ApplicationController
 
   before_action :authenticate_user!
   before_action :set_test_passage, only: %i[show update result gist]
-  skip_before_action :verify_authenticity_token
   
   def show; end
   
