@@ -21,8 +21,6 @@ class GistQuestionService
     Response.new(@client.create_gist(gist_params))
   end
 
-
-
   private
 
   def default_client
