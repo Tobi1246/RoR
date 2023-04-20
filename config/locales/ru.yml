@@ -42,6 +42,7 @@ ru:
 
   test_passages:
     show:
+      gist: "Суть Вопроса"
       title: "Прохождение теста"
       title2: ""
       question_number: "Вопросы"
@@ -51,7 +52,20 @@ ru:
       all_tests: "Вернуться ко всем тестам"
       score: "Вы набрали"
 
+  gists:
+    create:
+      gist_link: "ссылка" 
+      success: "Gist успешно создан, %{link}!"
+      failure: "Во время созранения gist произошла ошибка"
+
   admin:
+    gists:
+      index:
+        email: "Эл почта"
+        user: "Пользователь"
+        url: "Ссылка"
+        question: "Вопрос"
+        date_create: "Дата создания"
     tests:
       form:
         create_test: "Создать тест"
@@ -92,3 +106,5 @@ ru:
       log_out: "Выход"
     footer:
       lang: "Выберите язык"
+
+  description: "Вопрос %{test_title} от TestGuru"    

@@ -2,6 +2,7 @@
   <%= link_to 'TestGuru', root_path, class: 'p-2 navbar-brand' %>
   <% if current_user.class == Admin %>
     <%= link_to 'Admin page', admin_tests_path, class: 'btn btn-outline-primary' %>
+    <%= link_to 'Gists page', admin_gists_path, class: 'btn btn-outline-primary' %>
   <% end %>
   <span class="navbar-text">
     <% if user_signed_in? %>

@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-
   add_flash_types :success
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
@@ -21,12 +20,12 @@ class ApplicationController < ActionController::Base
     I18n.locale = I18n.locale_available?(params[:lang]) ? params[:lang] : I18n.default_locale
   end
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     current_user.is_a?(Admin) ? admin_tests_path : tests_path
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:firstname, :lastname])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[firstname lastname])
   end
 
   def record_not_found

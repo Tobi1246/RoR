@@ -1,0 +1,7 @@
+<tr>
+  <td><%= gist.user.firstname %></td>
+  <td><%= link_to truncate(gist.question.title, length: 25), [:admin, gist.question] %></td>
+  <td><%= gist.user.email %></td>
+  <td><%= link_to gist_to_hash(gist.url), gist.url, target: :blank %></td>
+  <td><%= gist.created_at %></td>
+</tr>
