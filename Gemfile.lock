@@ -168,6 +168,10 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.4)
+    rack-mini-profiler (3.1.0)
+      rack (>= 1.2.0)
+    rack-proxy (0.7.6)
+      rack
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (6.1.7.3)
@@ -224,6 +228,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    semantic_range (3.0.0)
+    spring (4.1.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -254,6 +260,11 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
+    webpacker (5.4.4)
+      activesupport (>= 5.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     websocket (1.2.9)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
@@ -278,20 +289,23 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   letter_opener
+  net-smtp
   octicons_helper
   octokit (~> 5.0)
   puma (~> 5.0)
+  rack-mini-profiler
   rails (~> 6.1.7)
   rails-i18n
   sassc-rails
   selenium-webdriver
+  spring
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
-  tzinfo-data
   web-console
   webdrivers
+  webpacker (~> 5.0)
 
 RUBY VERSION
    ruby 3.1.2p20
