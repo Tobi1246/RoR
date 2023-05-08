@@ -53,6 +53,5 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.1]
 
     add_column :users, :password_digest, :string
     remove_index(:users, :email)
-    change_column_default(users:, :email, nil)
   end
 end
