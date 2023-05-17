@@ -2,4 +2,5 @@
 <p>Title: <%= @test.title %></p>
 <p>Questions:</p>
 <%= render @test.questions %>
+<%= link_to t('.edit_test'), edit_admin_test_path(@test), class: "btn btn-outline-primary" %>
 <p><%=  link_to "All test", admin_tests_path, class: 'btn btn-outline-dark mt-1', method: :get %></p>

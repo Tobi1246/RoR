@@ -1,5 +1,5 @@
 <%= form_with model: [:admin, @test, @question], data: { turbo: false }, local: true do |f| %>
-  <%= render 'shared/errors', recource: @question %>
+  <%= render 'shared/errors', resource: @question %>
 
   <p><%= f.label :title %></p>
   <p><%= f.text_area :title %></p>

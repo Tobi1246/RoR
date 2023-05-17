@@ -67,8 +67,10 @@ ru:
         question: "Вопрос"
         date_create: "Дата создания"
     tests:
+      form_inline:
+        submit: "Подтвердить"      
       form:
-        create_test: "Создать тест"
+        create_test: "Подтвердить"
       test:
         delete_test: "Удалить тест"
         create_question: "Создать новый вопрос"
@@ -87,7 +89,7 @@ ru:
         header: "Тесты"
     questions:
       form:
-        create_question: "Создать вопрос"
+        create_question: "Подтвердить"
     answers:
       show:
         delete_answer: "Удалить ответ"
