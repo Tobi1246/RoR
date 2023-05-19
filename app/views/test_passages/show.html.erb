@@ -1,6 +1,5 @@
 <h1><%= t('.title') %> <%= @test_passage.test.title %><%= t('.title2') %></h1>
 
-<p><%= t('.question_number') %> <%= @test_passage.current_question_number %>/<%= @test_passage.test.questions.count %></p>
 <b><%= @test_passage.current_question.title %></b>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, data: { turbo: false }, method: :put do |f| %>
@@ -14,4 +13,8 @@
   <p><%= link_to t('.gist'), test_passage_gists_path(@test_passage), class: "btn btn-outline-primary", method: :post %></p>
   <p><%= f.submit t('.next'), class: "btn btn-outline-dark" %></p>
 <% end %>
- 
+
+<%= t('.question_number') %> <%= @test_passage.current_question_number %>/<%= @test_passage.test.questions.count %>
+<%= content_tag :progress, class: 'progressBar', data: { current_question: @test_passage.current_question_number,
+                                                         count_question: @test_passage.test.questions.count } do %>
+<% end %>

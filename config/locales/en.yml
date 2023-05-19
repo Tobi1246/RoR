@@ -62,8 +62,10 @@ en:
         question: "Question"
         date_create: "Date created"   
     tests:
+      form_inline:
+        submit: "Submit"
       form:
-        create_test: "Create test"
+        create_test: "Submit"
       test:
         delete_test: "Deleted test"
         create_question: "Create new question"
@@ -82,7 +84,7 @@ en:
         header: "Tests"
     questions:
       form:
-        create_question: "Create question"
+        create_question: "Submit"
     answers:
       show:
         delete_answer: "Delete answer"
