@@ -108,5 +108,12 @@ ru:
       log_out: "Выход"
     footer:
       lang: "Выберите язык"
+      feedback: "Обратная связь"
 
   description: "Вопрос %{test_title} от TestGuru"    
+
+  feedbacks:
+    new:
+      back: "Назад"
+    form:
+      create_feedback: "Отправить"

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
                                    path_names: { sign_in: :login, sign_out: :quit }
 
   root  to: "tests#index"
+
+  resources :feedbacks, only: %i[create new]
   
   resources :tests, only: :index do
     member do

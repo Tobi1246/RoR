@@ -103,5 +103,12 @@ en:
       log_out: "Quit"
     footer:
       lang: "Select lang"
+      feedback: "Feedback"
 
-  description: "A question about  %{test_title} from TestGuru"  
+  description: "A question about  %{test_title} from TestGuru" 
+
+  feedbacks:
+    new:
+      back: "Back"
+    form:
+      create_feedback: "Send"
