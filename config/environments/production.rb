@@ -27,12 +27,8 @@ Rails.application.configure do
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
-  #In Rails 3.x, you can prevent initializing your application and connecting to the database by
-  #ensuring that the following line is in your config/application.rb:
-  config.assets.initialize_on_precompile = false
-
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
