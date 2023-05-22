@@ -69,16 +69,17 @@ Rails.application.configure do
     config.mailer_sender = 'mail@testguru.com'
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { host: 'tobi-testguru.herokuapp.com' }
   Rails.application.routes.default_url_options[:host] = 'http://tobi-testguru.herokuapp.com'
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     adress:              'smtp.gmail.com',
-    domain:              'smtp.gmail.com',
     port:                 587,
+    domain:              'gmail.com',
     user_name:            ENV['SMTP_USERNAME'],
     password:             ENV['SMTP_PASSWORD'],
-    authentication:       'plain',
+    authentication:      'plain',
     enable_starttls_auto: true 
   }
 
