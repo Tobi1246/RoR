@@ -18,6 +18,9 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      feedback:
+        title: "Title"
+        body: "Text"
 
   shared:
     errors:
@@ -111,4 +114,5 @@ en:
     new:
       back: "Back"
     form:
+      feedback: "Feedback"
       create_feedback: "Send"

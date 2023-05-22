@@ -20,6 +20,9 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      feedback:
+        title: "Заголовок"
+        body: "Текст"
 
   shared:
     errors:
@@ -116,4 +119,5 @@ ru:
     new:
       back: "Назад"
     form:
+      feedback: "Обратная связь"
       create_feedback: "Отправить"
