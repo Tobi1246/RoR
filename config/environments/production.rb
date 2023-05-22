@@ -3,8 +3,10 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.mailer_sender = 'mail@testguru.com'
+
   config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'tobi-testguru', port: 5000 }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
