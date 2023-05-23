@@ -1,7 +1,7 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4">
 
-    <h2>Enter the Guru gate</h2>
+    <h2><%= t('.reg_header') %></h2>
 
     <div class="card border-primary">
       <div class="card-body">
@@ -9,17 +9,17 @@
           <%= render "devise/shared/error_messages", resource: resource %>
 
             <div class="field">
-              <%= f.label :email, 'Email*' %><br />
+              <%= f.label :email %>*<br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
             </div>
 
             <div class="field">
-              <%= f.label :firstname, 'Firstname*'%>
+              <%= f.label :firstname %>*
               <%= f.text_field :firstname, class: 'form-control' %>
             </div>
 
             <div class="field">
-              <%= f.label :lastname%>
+              <%= f.label :lastname %>
               <%= f.text_field :lastname, class: 'form-control' %>
             </div>
 
@@ -29,24 +29,24 @@
             </div>
 
             <div class="field">
-              <%= f.label :password, 'Password*' %>
+              <%= f.label :password %>*
               <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <em>(<%= @minimum_password_length %> <%= t('.characters_minimum') %>)</em>
               <% end %><br />
               <%= f.password_field :password, autocomplete: "new-password" , class: 'form-control'%>
             </div>
 
             <div class="field">
-              <%= f.label :password_confirmation, 'Password confirmation*' %><br />
+              <%= f.label :password_confirmation %>*<br />
               <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
             </div>
 
             <div id="password-check"></div>
 
-            <s>*</s><h>Required fields</h>
+            <s>*</s><h><%= t('.require_fields') %></h>
 
             <div class="actions">
-              <%= f.submit "Confirm", class: 'btn btn-primary' %>
+              <%= f.submit t('.confirm'), class: 'btn btn-primary' %>
             </div>
           <% end %>
       </div>

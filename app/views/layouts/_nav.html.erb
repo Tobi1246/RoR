@@ -9,7 +9,7 @@
        <%= t('.hello') %>,<b><%= current_user.firstname %></b> Guru
        <b align="center"><%= button_to t('.log_out'), destroy_user_session_path, class: "btn btn-outline-secondary", method: :delete %></b>
     <% else %>
-      <%= link_to 'Login', new_user_session_path %> <%= link_to 'Singup', new_user_registration_path %>
+      <%= link_to t('.login'), new_user_session_path %> <%= link_to t('.singup'), new_user_registration_path %>
     <% end %> 
   </span>
 </nav>

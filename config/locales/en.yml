@@ -1,6 +1,20 @@
 en:
   hello: "Hello world"
 
+  devise:
+    sessions:
+      new:
+        remember_me: "Remember me"
+    shared:
+      links:
+        forgot_password: "Forgot your password?"
+    registrations:
+      new:
+        characters_minimum: "characters minimum"
+        require_fields: "Required fields"
+        reg_header: "Enter The Guru Gate"
+        confirm: "Create account"
+
   users:
     sessions:
       create:
@@ -12,6 +26,13 @@ en:
         create: "Create test"
         update: "Update test"
     label:
+      user:
+        age: "Возраст"
+        firstname: "First name"
+        lastname: "Last name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Confirm password"      
       question:
         title: "Text question"
       test:
@@ -104,6 +125,8 @@ en:
     nav:
       hello: "Welcom"
       log_out: "Quit"
+      login: "Login"
+      singup: "Singup"
     footer:
       lang: "Select lang"
       feedback: "Feedback"

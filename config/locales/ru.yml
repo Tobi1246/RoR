@@ -1,6 +1,20 @@
 ru: 
   hello: "Привет мир"
 
+  devise:
+    sessions:
+      new:
+        remember_me: "Запомнить меня"
+    shared:
+      links:
+        forgot_password: "Забыл(а) пароль"
+    registrations:
+      new:
+        characters_minimum: "минимум символов"
+        require_fields: "Обязательные поля"
+        reg_header: "Регистрация нового Guru"
+        confirm: "Создать аккаунт"  
+
   users:
     sessions:
       create:
@@ -14,6 +28,13 @@ ru:
         create: "Создать тест"
         update: "Обновить тест"
     label:
+      user:
+        age: "Возраст"
+        firstname: "Имя"
+        lastname: "Фамилия"
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
       question:
         title: "Текст вопроса"
       test:
@@ -109,6 +130,8 @@ ru:
     nav:
       hello: "Добро пожаловать"
       log_out: "Выход"
+      singup: "Регистрация"
+      login: "Вход"
     footer:
       lang: "Выберите язык"
       feedback: "Обратная связь"
