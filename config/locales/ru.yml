@@ -91,11 +91,18 @@ ru:
         question: "Вопрос"
         date_create: "Дата создания"
     tests:
+      show:
+        test: "Тест"
+        questions: "Вопросы:"
+        edit_test: "Изменить тест"
+        all_tests: "Все тесты"
       form_inline:
         submit: "Подтвердить"      
       form:
         create_test: "Подтвердить"
       test:
+        show: "Просмотр"
+        edit: "Изменить"
         delete_test: "Удалить тест"
         create_question: "Создать новый вопрос"
       new:
@@ -112,10 +119,32 @@ ru:
         create_test: "Создать новый тест"
         header: "Тесты"
     questions:
+      edit:
+        edit_question: "Редактирование вопроса"
+        back: "Назад"
+      question:
+        show: "Просмотр"
+        edit: "Изменить"
+      show:
+        new_answer: "Добавить ответ"
+        edit_question: "Изменить вопрос"
+        delete_question: "Удалить вопрос"
+        back: "Назад"
+        main_page: "На главную"
       form:
         create_question: "Подтвердить"
     answers:
+      edit:
+        show: "Просмотр ответа"
+        back: "Назад"
+      answer:
+        delete: "Удалить"
+        show: "Просмотр"
+        edit: "Изменить"
       show:
+        question: "Вопрос:"
+        answer: "Ответ:"
+        correct: "Правильный?"        
         delete_answer: "Удалить ответ"
         edit: "Изменить"
         back: "Назад"
@@ -128,6 +157,8 @@ ru:
 
   layouts:
     nav:
+      gists_page: "Страница с gists"
+      admin_page: "Страница администратора"
       hello: "Добро пожаловать"
       log_out: "Выход"
       singup: "Регистрация"

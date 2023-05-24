@@ -7,7 +7,7 @@
       <p><%= current_year %></p>
 
       <p class="position-absolute bottom-0 end-0 translate-middle", align="center"><%= t('.lang') %>
-      <br><%= link_to 'ru', "/?lang=ru" %> <%= link_to 'en', '/?lang=en' %></p>
+      <br><%= link_to 'ru', { locale: :ru } %> <%= link_to 'en', { locale: :en } %></p>
     </ul>
   </div>
 </nav>

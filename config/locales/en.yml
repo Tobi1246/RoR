@@ -86,11 +86,18 @@ en:
         question: "Question"
         date_create: "Date created"   
     tests:
+      show:
+        test: "Test"
+        questions: "Questions:"
+        edit_test: "Edit test"
+        all_tests: "All tests"      
       form_inline:
         submit: "Submit"
       form:
         create_test: "Submit"
       test:
+        show: "Show"
+        edit: "Edit"
         delete_test: "Deleted test"
         create_question: "Create new question"
       new:
@@ -107,10 +114,28 @@ en:
         create_test: "Create new test"
         header: "Tests"
     questions:
+      edit:
+        edit_question: "Edit question"
+        back: "Back"      
+      question:
+        show: "Show"
+        edit: "Edit"      
       form:
         create_question: "Submit"
     answers:
+      edit:
+        show: "Show answer"
+        back: "Back"      
+      answer:
+        delete: "Delete"
+        show: "Show"
+        edit: "Edit"
+        back: "Back"
+        main_page: "Mait page"              
       show:
+        question: "Question:"
+        answer: "Answer:"
+        correct: "Correct?"            
         delete_answer: "Delete answer"
         edit: "Edit"
         back: "Back"      
@@ -123,6 +148,8 @@ en:
 
   layouts:
     nav:
+      gists_page: "Gists page"
+      admin_page: "Admin page"
       hello: "Welcom"
       log_out: "Quit"
       login: "Login"
