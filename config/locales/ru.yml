@@ -1,6 +1,20 @@
 ru: 
   hello: "Привет мир"
 
+  devise:
+    sessions:
+      new:
+        remember_me: "Запомнить меня"
+    shared:
+      links:
+        forgot_password: "Забыл(а) пароль"
+    registrations:
+      new:
+        characters_minimum: "минимум символов"
+        require_fields: "Обязательные поля"
+        reg_header: "Регистрация нового Guru"
+        confirm: "Создать аккаунт"  
+
   users:
     sessions:
       create:
@@ -14,12 +28,22 @@ ru:
         create: "Создать тест"
         update: "Обновить тест"
     label:
+      user:
+        age: "Возраст"
+        firstname: "Имя"
+        lastname: "Фамилия"
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
       question:
         title: "Текст вопроса"
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      feedback:
+        title: "Заголовок"
+        body: "Текст"
 
   shared:
     errors:
@@ -67,11 +91,18 @@ ru:
         question: "Вопрос"
         date_create: "Дата создания"
     tests:
+      show:
+        test: "Тест"
+        questions: "Вопросы:"
+        edit_test: "Изменить тест"
+        all_tests: "Все тесты"
       form_inline:
         submit: "Подтвердить"      
       form:
         create_test: "Подтвердить"
       test:
+        show: "Просмотр"
+        edit: "Изменить"
         delete_test: "Удалить тест"
         create_question: "Создать новый вопрос"
       new:
@@ -88,10 +119,32 @@ ru:
         create_test: "Создать новый тест"
         header: "Тесты"
     questions:
+      edit:
+        edit_question: "Редактирование вопроса"
+        back: "Назад"
+      question:
+        show: "Просмотр"
+        edit: "Изменить"
+      show:
+        new_answer: "Добавить ответ"
+        edit_question: "Изменить вопрос"
+        delete_question: "Удалить вопрос"
+        back: "Назад"
+        main_page: "На главную"
       form:
         create_question: "Подтвердить"
     answers:
+      edit:
+        show: "Просмотр ответа"
+        back: "Назад"
+      answer:
+        delete: "Удалить"
+        show: "Просмотр"
+        edit: "Изменить"
       show:
+        question: "Вопрос:"
+        answer: "Ответ:"
+        correct: "Правильный?"        
         delete_answer: "Удалить ответ"
         edit: "Изменить"
         back: "Назад"
@@ -104,9 +157,21 @@ ru:
 
   layouts:
     nav:
+      gists_page: "Страница с gists"
+      admin_page: "Страница администратора"
       hello: "Добро пожаловать"
       log_out: "Выход"
+      singup: "Регистрация"
+      login: "Вход"
     footer:
       lang: "Выберите язык"
+      feedback: "Обратная связь"
 
   description: "Вопрос %{test_title} от TestGuru"    
+
+  feedbacks:
+    new:
+      back: "Назад"
+    form:
+      feedback: "Обратная связь"
+      create_feedback: "Отправить"

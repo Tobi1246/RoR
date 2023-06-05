@@ -10,7 +10,7 @@
     </p>
   <% end %>
 
-  <p><%= link_to t('.gist'), test_passage_gists_path(@test_passage), class: "btn btn-outline-primary", method: :post %></p>
+  
   <p><%= f.submit t('.next'), class: "btn btn-outline-dark" %></p>
 <% end %>
 
@@ -18,3 +18,4 @@
 <%= content_tag :progress, class: 'progressBar', data: { current_question: @test_passage.current_question_number,
                                                          count_question: @test_passage.test.questions.count } do %>
 <% end %>
+<p><%= button_to t('.gist'), gist_test_passage_path(@test_passage), class: "btn btn-outline-primary", method: :post %></p>

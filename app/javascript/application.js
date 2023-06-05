@@ -2,7 +2,7 @@
 //= require jquery
 import "@hotwired/turbo-rails"
 import "controllers"
-import './utilities/sorting'
-import './utilities/password_input'
-import './utilities/form_inline'
-import './utilities/status_bar'
+import 'utilities/sorting'
+import 'utilities/password_input'
+import 'utilities/form_inline'
+import 'utilities/status_bar'

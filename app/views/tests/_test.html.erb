@@ -1,6 +1,6 @@
-<tr>
-  <td><%= test.title %></td>
+<tr class="table-group-divider">
+  <td ><%= test.title %></td>
   <td><%= test_level(test) %></td>
   <td><%= test.questions.count %></td>
   <td><%= button_to t('.start'), start_test_path(test), class: "btn btn-outline-success" %></td>
-</tr>
+</tr >

@@ -10,14 +10,15 @@ class ApplicationController < ActionController::Base
   helper_method :current_user,
                 :login_in?
 
-  def default_url_options
-    I18n.locale == I18n.default_locale ? {} : { lang: I18n.locale }
-  end
 
   private
 
+  def default_url_options(options = {})
+    { locale: I18n.locale }.merge options
+  end
+
   def set_locale
-    I18n.locale = I18n.locale_available?(params[:lang]) ? params[:lang] : I18n.default_locale
+    I18n.locale = I18n.locale_available?(params[:locale]) ? params[:locale] : I18n.default_locale
   end
 
   def after_sign_in_path_for(_resource)

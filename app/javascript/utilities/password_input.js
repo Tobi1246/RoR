@@ -12,14 +12,19 @@ document.addEventListener('turbo:load', function() {
       if (confirmPassword.value === '') {
         passwordCheck.innerHTML = '';
         return;
-      }
-
-      if (password.value === confirmPassword.value) {
+      } else if (password.value === confirmPassword.value) {
         passwordCheck.innerHTML = '<div class="alert alert-success">passwords match</div>'
-      } else {
+      } else if (password.value !== confirmPassword.value) {
         passwordCheck.innerHTML = `<div class="alert alert-danger">passwords don't match</div>`
       }
-
+    })
+    password.addEventListener('input', function() {
+      if (confirmPassword.value ==='') {
+        passwordCheck.innerHTML = '';
+        return;
+      } else { (password.value !== confirmPassword.value)
+        passwordCheck.innerHTML = `<div class="alert alert-danger">passwords don't match</div>`
+      }
     })
   }
 })

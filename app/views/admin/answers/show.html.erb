@@ -1,14 +1,14 @@
-<h>Question</h>
-<p><%= @answer.question.title %></p>
+<p><b><%= t('.question') %> </b><%= @answer.question.title %></p>
+
 
 <p>
-  <b>Answer:</b>
-  <p><%= @answer.body %>
+  <b><%= t('.answer') %></b>
+  <%= @answer.body %>
 </p>
 
 <p>
-  <b>Correct:</b>
-  <p><%= @answer.correct %>
+  <b><%= t('.correct') %></b>
+  <%= @answer.correct %>
 </p>
 
 <%= button_to t('.delete_answer'),

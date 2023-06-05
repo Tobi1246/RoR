@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :test_passages
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :gists, dependent: :destroy
+  has_many :feedbacks, dependent: :destroy
 
   validates :email, presence: true, 
                     uniqueness: true,

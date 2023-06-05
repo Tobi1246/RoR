@@ -1,15 +1,15 @@
 <nav class="navbar navbar-light bg-light">
   <%= link_to 'TestGuru', root_path, class: 'p-2 navbar-brand' %>
   <% if current_user.class == Admin %>
-    <%= link_to 'Admin page', admin_tests_path, class: 'btn btn-outline-primary' %>
-    <%= link_to 'Gists page', admin_gists_path, class: 'btn btn-outline-primary' %>
+    <%= link_to t('.admin_page'), admin_tests_path, class: 'btn btn-outline-primary' %>
+    <%= link_to t('.gists_page'), admin_gists_path, class: 'btn btn-outline-primary' %>
   <% end %>
   <span class="navbar-text">
     <% if user_signed_in? %>
        <%= t('.hello') %>,<b><%= current_user.firstname %></b> Guru
        <b align="center"><%= button_to t('.log_out'), destroy_user_session_path, class: "btn btn-outline-secondary", method: :delete %></b>
     <% else %>
-      <%= link_to 'Login', new_user_session_path %> <%= link_to 'Singup', new_user_registration_path %>
+      <%= link_to t('.login'), new_user_session_path %> <%= link_to t('.singup'), new_user_registration_path %>
     <% end %> 
   </span>
 </nav>

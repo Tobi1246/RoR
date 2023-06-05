@@ -1,32 +1,36 @@
 Rails.application.routes.draw do
   
-  devise_for :users, path: :gurus, controllers: { sessions: 'users/sessions' },
-                                   path_names: { sign_in: :login, sign_out: :quit }
-
-  root  to: "tests#index"
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   
-  resources :tests, only: :index do
-    member do
-      post :start
+    devise_for :users, path: :gurus, controllers: { sessions: 'users/sessions' },
+                                      path_names: { sign_in: :login, sign_out: :quit }
+
+    root  to: "tests#index"
+  
+    resources :feedbacks, only: %i[create new]
+  
+    resources :tests, only: :index do
+      member do
+        post :start
+      end
     end
-  end
 
-  resources :test_passages, only: %i[show update] do
-    resources :gists, only: :create
-    member do
-      get :result
+    resources :test_passages, only: %i[show update] do
+      member do
+        post :gist, to: 'gists#create'
+        get :result
+      end
     end
-  end
 
-  namespace :admin do
-    resources :gists, only: :index
-    resources :tests do
-      patch :update_inline, on: :member
+    namespace :admin do
+      resources :gists, only: :index
+      resources :tests do
+        patch :update_inline, on: :member
 
-      resources :questions, except: :index, shallow: true do
-        resources :answers, except: :index, shallow: true
+        resources :questions, except: :index, shallow: true do
+          resources :answers, except: :index, shallow: true
+        end
       end
     end
   end
-
 end

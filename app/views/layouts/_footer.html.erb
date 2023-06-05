@@ -2,10 +2,12 @@
   <div class="container-fluid">
     <ul>
       <li>Создано помощью ресурса :<%= link_to "Thinknetica", 'https://thinknetica.com/' %></li>
-      <li>Author: Dmitry, linked GitHub: ( <%= author_github_link %> , <%= repo_app_link %> )</li>   
+      <li>Author: Dmitry, linked GitHub: ( <%= author_github_link %> , <%= repo_app_link %> )</li>
+      <li class="position-absolute start-50 translate-middle"><%= link_to t('.feedback'), new_feedback_path %></li>   
       <p><%= current_year %></p>
+
       <p class="position-absolute bottom-0 end-0 translate-middle", align="center"><%= t('.lang') %>
-      <br><%= link_to 'ru', "/?lang=ru" %> <%= link_to 'en', '/?lang=en' %></p> 
+      <br><%= link_to 'ru', { locale: :ru } %> <%= link_to 'en', { locale: :en } %></p>
     </ul>
   </div>
 </nav>
