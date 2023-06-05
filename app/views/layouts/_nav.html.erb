@@ -3,7 +3,9 @@
   <% if current_user.class == Admin %>
     <%= link_to t('.admin_page'), admin_tests_path, class: 'btn btn-outline-primary' %>
     <%= link_to t('.gists_page'), admin_gists_path, class: 'btn btn-outline-primary' %>
+    <%= link_to t('.all_badges'), admin_badges_path, class: 'btn btn-outline-primary' %>
   <% end %>
+   <%= link_to t('.badges'), badges_path, class: 'btn btn-outline-primary' %>
   <span class="navbar-text">
     <% if user_signed_in? %>
        <%= t('.hello') %>,<b><%= current_user.firstname %></b> Guru

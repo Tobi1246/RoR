@@ -1,0 +1,21 @@
+<table class="rounded float-start">
+  <td>
+    <table class="table border" width="150">
+      <tr>
+          <td>Badge name:</td>
+          <td><%= badge.name %></td>
+      </tr>
+      <tr>
+        <td><%= link_to t('.edit'), edit_admin_badge_path(badge), class: "btn btn-outline-primary"%> </td>   
+        <td><%= button_to t('.delete'), admin_badge_path(badge), method: :delete, class: "btn btn-outline-danger" %></td>
+      </tr>
+      <tr>
+        <td width="150">User:<%= badge.user.firstname %></td>
+      </tr>
+      <tr> <img src="<%= badge.img %>"    
+                height="150" 
+                alt="<%= badge.name %>">
+      </tr>
+    </table>
+  <td>
+</table>

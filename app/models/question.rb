@@ -6,5 +6,4 @@ class Question < ApplicationRecord
   has_many :gists, dependent: :destroy
 
   validates :title, presence: true
-
 end

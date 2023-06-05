@@ -46,7 +46,5 @@ Answer.create!(question: questions[4], body: 4)
 Answer.create!(correct: false, question: questions[4], body: 3)
 Answer.create!(question: questions[5], body: 6)
 Answer.create!(correct: false, question: questions[5], body: 3)
-TestPassage.create!([{test: tests[0], user: users[0]},
-                     {test: tests[1], user: users[1]},
-                     {test: tests[2], user: users[2]}]) 
+
 Admin.create!(firstname: 'Tobi', email: 'asd@ya.ru', password: 'admin123')
