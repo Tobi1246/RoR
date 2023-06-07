@@ -14,7 +14,8 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :completed_tests, -> { where(test_passages: { completed: true }) }, through: :test_passages, source: :test
   has_many :feedbacks, dependent: :destroy
-  has_many :badges, dependent: :destroy
+  has_many :user_badges
+  has_many :badges, through: :user_badges, dependent: :destroy
 
   validates :email, presence: true,
                     uniqueness: true,

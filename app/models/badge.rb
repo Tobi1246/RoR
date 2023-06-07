@@ -1,5 +1,9 @@
 class Badge < ApplicationRecord
-  belongs_to :user
+  has_many :user_badges
+  has_many :users, through: :user_badges, dependent: :destroy
+
+  validates :name, presence: true
+  validates :img, presence: true
 
   IMG_FOR_PASSAGE_TEST = { 1 => "https://mir-s3-cdn-cf.behance.net/user/276/8853769.549b42d8ad386.jpg",
                            2 => "http://ru.meneger.net/images/photo/1548618680.jpg",
