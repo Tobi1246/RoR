@@ -27,5 +27,12 @@ class User < ApplicationRecord
     test_passages.order(id: :desc).find_by(test_id: test.id)
   end
 
+  def completed_test_where_level(level)
+    completed_tests.where(level: level)
+  end
+
+  def completed_test_where_category(category)
+    completed_tests.where(category: category)
+  end  
 end
 
