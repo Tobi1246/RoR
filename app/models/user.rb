@@ -58,8 +58,6 @@ class User < ApplicationRecord
 
   private
 
-
-
   def all_levels_completed_badge
     Test.all.where(level: @test_passage.test.level) == self.completed_test_where_level(@test_passage.test.level).uniq
   end
@@ -69,18 +67,10 @@ class User < ApplicationRecord
   end
 
   def ldublicate?
-    if badges.find_by(name: "Comleted all tests level:#{ @test_passage.test.level }")
-      false
-    else
-      true
-    end
+    return false  if badges.exists?(name: "Comleted all tests level:#{ @test_passage.test.level }")
   end
 
   def cduplicate?
-    if badges.find_by(name: "Comleted all tests category:#{ @test_passage.test.category.title }")
-      false
-    else
-      true
-    end
+    return false if badges.exists?(name: "Comleted all tests category:#{ @test_passage.test.category.title }")
   end
 end

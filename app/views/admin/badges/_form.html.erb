@@ -3,8 +3,15 @@
 
   <p><%= f.label :name %></p>
   <p><%= f.text_field :name %></p>
+
   <p><%= f.label :img %></p>
   <p><%= f.text_field :img %></p>
+
+  <p><%= f.label :conditions %></p>
+  <p><%= f.text_field :conditions %></p>
+
+  <p><%= f.label :conditions_params %></p>
+  <p><%= f.text_field :conditions_params %></p>
 
   <p><%= f.submit t('.create_badge'), class: "btn btn-outline-success" %></p>
 <% end %>
