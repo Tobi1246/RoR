@@ -8,6 +8,5 @@ module Badges
     def ldublicate?
        @current_user.badges.exists?(name: "Comleted all tests level:#{ @level }")
     end
-
   end
 end

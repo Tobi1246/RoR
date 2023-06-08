@@ -1,5 +1,4 @@
 class BadgeService
-
   CONDUCTION = {
     pasage_in_first_try: Badges::BadgePassegeInFirstTryTest,
     completed_all_level_tests: Badges::BadgeAllLevelTests,
@@ -23,5 +22,4 @@ class BadgeService
   def add_badges(badge)
     @current_user.badges << badge
   end
-
 end

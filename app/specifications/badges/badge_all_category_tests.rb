@@ -8,6 +8,5 @@ module Badges
     def cduplicate?
        @current_user.badges.exists?(conditions_params: @conditions_params)
     end
-
   end
 end

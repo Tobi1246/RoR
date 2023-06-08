@@ -5,5 +5,4 @@ class Badge < ApplicationRecord
   validates :name, presence: true
   validates :img, presence: true
   validates :conditions, presence: true
-
 end

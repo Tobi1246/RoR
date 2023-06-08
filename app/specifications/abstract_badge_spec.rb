@@ -8,5 +8,4 @@ class AbstractBadgeSpec
   def satisfied?
     raise "#{__method__} unfifined for #{self.class} "
   end
-
 end
