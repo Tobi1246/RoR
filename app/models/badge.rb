@@ -4,6 +4,7 @@ class Badge < ApplicationRecord
 
   validates :name, presence: true
   validates :img, presence: true
+  validates :cunductions, presence: true
 
   IMG_FOR_PASSAGE_TEST = [ "nill",
                            "https://mir-s3-cdn-cf.behance.net/user/276/8853769.549b42d8ad386.jpg",

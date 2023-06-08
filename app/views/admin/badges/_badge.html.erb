@@ -5,6 +5,14 @@
           <td><%= badge.name %></td>
       </tr>
       <tr>
+          <td>Badge cond:</td>
+          <td><%= badge.conditions %></td>
+      </tr>
+      <tr>
+          <td>Badge params:</td>
+          <td><%= badge.conditions_params %></td>
+      </tr>            
+      <tr>
         <td><%= link_to t('.edit'), edit_admin_badge_path(badge), class: "btn btn-outline-primary"%> </td>   
         <td><%= button_to t('.delete'), admin_badge_path(badge), method: :delete, class: "btn btn-outline-danger" %></td>
       </tr>
