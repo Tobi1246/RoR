@@ -1,5 +1,4 @@
 class AbstractBadgeSpec
-
   def initialize(test_passage, conditions_params)
     @test_passage = test_passage
     @current_user = test_passage.user

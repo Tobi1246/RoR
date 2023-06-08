@@ -61,4 +61,20 @@ Badge.create!(name: "Completed all tests category: SQL",
               img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
               conditions: "completed_all_category_tests",
               conditions_params: categorys[2].id)
+Badge.create!(name: "Completed all tests level: 1",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_level_tests",
+              conditions_params: 1)
+Badge.create!(name: "Completed all tests level: 2",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_level_tests",
+              conditions_params: 2)
+Badge.create!(name: "Completed all tests level: 3",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_level_tests",
+              conditions_params: 3)
+Badge.create!(name: "Passage test in first try",
+              img: "https://cdn1.vectorstock.com/i/1000x1000/37/15/completed-rubber-stamp-vector-12423715.jpg",
+              conditions: "pasage_in_first_try")
+
 
