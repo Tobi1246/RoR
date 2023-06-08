@@ -36,6 +36,7 @@ en:
       question:
         title: "Text question"
       test:
+        timer: "Timer(time in seconds)"
         title: "Title"
         level: "Level"
         category_id: "Category"

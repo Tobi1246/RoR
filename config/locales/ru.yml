@@ -38,6 +38,7 @@ ru:
       question:
         title: "Текст вопроса"
       test:
+        timer: "Таймер(время в секундах)"
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
