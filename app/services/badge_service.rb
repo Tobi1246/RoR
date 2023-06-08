@@ -1,9 +1,9 @@
 class BadgeService
 
   CONDUCTION = {
-    pasage_in_first_try: BadgePassegeInFirstTryTest,
-    completed_all_level_tests: BadgeAllLevelTests,
-    completed_all_category_tests: BadgeAllCategoryTests
+    pasage_in_first_try: Badges::BadgePassegeInFirstTryTest,
+    completed_all_level_tests: Badges::BadgeAllLevelTests,
+    completed_all_category_tests: Badges::BadgeAllCategoryTests
   }.freeze
 
   def initialize(test_passage)

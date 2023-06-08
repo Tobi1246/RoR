@@ -48,3 +48,17 @@ Answer.create!(question: questions[5], body: 6)
 Answer.create!(correct: false, question: questions[5], body: 3)
 
 Admin.create!(firstname: 'Tobi', email: 'asd@ya.ru', password: 'admin123')
+
+Badge.create!(name: "Completed all tests category: Ruby",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_category_tests",
+              conditions_params: categorys[0].id)
+Badge.create!(name: "Completed all tests category: HTML",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_category_tests",
+              conditions_params: categorys[1].id)
+Badge.create!(name: "Completed all tests category: SQL",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_category_tests",
+              conditions_params: categorys[2].id)
+
