@@ -2,6 +2,13 @@
 
 <b><%= @test_passage.current_question.title %></b>
 
+<p><%= t('.timer') %>:
+  <% unless @test_passage.test.timer.nil? %>
+    <%= content_tag :timer, class: 'timer', data: { left_time_score: @test_passage.left_time_score } do %>
+      <% end %>
+  <% end %>
+</p>
+
 <%= form_with url: test_passage_path(@test_passage), local: true, data: { turbo: false }, method: :put do |f| %>
   <%= f.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
     <p>
@@ -10,8 +17,7 @@
     </p>
   <% end %>
 
-  
-  <p><%= f.submit t('.next'), class: "btn btn-outline-dark" %></p>
+  <p id="next"><%= f.submit t('.next'), class: "btn btn-outline-dark" %></p>
 <% end %>
 
 <%= t('.question_number') %> <%= @test_passage.current_question_number %>/<%= @test_passage.test.questions.count %>

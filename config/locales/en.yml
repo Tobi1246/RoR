@@ -63,6 +63,7 @@ en:
 
   test_passages:
     show:
+      timer: "Timer"
       gist: "Gist Question"
       title: "Passing the"
       title2: " test"
