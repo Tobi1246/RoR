@@ -36,6 +36,7 @@ en:
       question:
         title: "Text question"
       test:
+        timer: "Timer(time in seconds)"
         title: "Title"
         level: "Level"
         category_id: "Category"
@@ -78,6 +79,14 @@ en:
       failure: "An error occurred while saving gist"        
 
   admin:
+    badges:
+      form:
+        create_badge: "Create badge"      
+      destroy:
+        alert: "Badge has bin deleted"
+      badge:
+        edit: "Edit"
+        delete: "Delete"    
     gists:
       index:
         email: "Email"
@@ -112,8 +121,11 @@ en:
         test_level: "Level"
         question_title: "Questions"
         create_test: "Create new test"
+        create_badge: "Create badge"
         header: "Tests"
     questions:
+      show:
+        delete_question: "Delete question"
       edit:
         edit_question: "Edit question"
         back: "Back"      
@@ -148,6 +160,8 @@ en:
 
   layouts:
     nav:
+      all_badges: "All badges"
+      badges: "Badges"
       gists_page: "Gists page"
       admin_page: "Admin page"
       hello: "Welcom"

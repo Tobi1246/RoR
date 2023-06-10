@@ -38,6 +38,7 @@ ru:
       question:
         title: "Текст вопроса"
       test:
+        timer: "Таймер(время в секундах)"
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
@@ -83,6 +84,14 @@ ru:
       failure: "Во время созранения gist произошла ошибка"
 
   admin:
+    badges:
+      form:
+        create_badge: "Создать награду"
+      destroy:
+        alert: "Награда удалена"      
+      badge:
+        edit: "Изменить"
+        delete: "Удалить"
     gists:
       index:
         email: "Эл почта"
@@ -113,6 +122,7 @@ ru:
       create:
         success: "Тест успешно создан"
       index:
+        create_badge: "Создать награду"
         test_title: "Название"
         test_level: "Уровень"
         question_title: "Вопросы"
@@ -157,6 +167,8 @@ ru:
 
   layouts:
     nav:
+      all_badges: "Все награды"
+      badges: "Награды"
       gists_page: "Страница с gists"
       admin_page: "Страница администратора"
       hello: "Добро пожаловать"

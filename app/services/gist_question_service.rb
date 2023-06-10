@@ -41,5 +41,4 @@ class GistQuestionService
   def gist_content
     [@question.title, *@question.answers.pluck(:body)].join("\n")
   end
-
 end

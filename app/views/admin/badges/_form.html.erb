@@ -1,0 +1,17 @@
+<%= form_with model: [:admin, @badge], local: true, data: { turbo: false } do |f| %>
+  <%= render 'shared/errors', resource: @badge %>
+
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name %></p>
+
+  <p><%= f.label :img %></p>
+  <p><%= f.text_field :img %></p>
+
+  <p><%= f.label :conditions %></p>
+  <p><%= f.text_field :conditions %></p>
+
+  <p><%= f.label :conditions_params %></p>
+  <p><%= f.text_field :conditions_params %></p>
+
+  <p><%= f.submit t('.create_badge'), class: "btn btn-outline-success" %></p>
+<% end %>

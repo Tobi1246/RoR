@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user,
                 :login_in?
 
-
   private
 
   def default_url_options(options = {})

@@ -46,7 +46,35 @@ Answer.create!(question: questions[4], body: 4)
 Answer.create!(correct: false, question: questions[4], body: 3)
 Answer.create!(question: questions[5], body: 6)
 Answer.create!(correct: false, question: questions[5], body: 3)
-TestPassage.create!([{test: tests[0], user: users[0]},
-                     {test: tests[1], user: users[1]},
-                     {test: tests[2], user: users[2]}]) 
+
 Admin.create!(firstname: 'Tobi', email: 'asd@ya.ru', password: 'admin123')
+
+Badge.create!(name: "Completed all tests category: Ruby",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_category_tests",
+              conditions_params: categorys[0].id)
+Badge.create!(name: "Completed all tests category: HTML",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_category_tests",
+              conditions_params: categorys[1].id)
+Badge.create!(name: "Completed all tests category: SQL",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_category_tests",
+              conditions_params: categorys[2].id)
+Badge.create!(name: "Completed all tests level: 1",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_level_tests",
+              conditions_params: 1)
+Badge.create!(name: "Completed all tests level: 2",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_level_tests",
+              conditions_params: 2)
+Badge.create!(name: "Completed all tests level: 3",
+              img: "https://c8.alamy.com/comp/ERDGH5/vector-illustration-of-green-completed-stamp-on-white-background-ERDGH5.jpg",
+              conditions: "completed_all_level_tests",
+              conditions_params: 3)
+Badge.create!(name: "Passage test in first try",
+              img: "https://cdn1.vectorstock.com/i/1000x1000/37/15/completed-rubber-stamp-vector-12423715.jpg",
+              conditions: "pasage_in_first_try")
+
+
