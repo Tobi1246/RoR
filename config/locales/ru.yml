@@ -67,6 +67,7 @@ ru:
 
   test_passages:
     show:
+      timer: "Таймер"
       gist: "Суть Вопроса"
       title: "Прохождение теста"
       title2: ""
