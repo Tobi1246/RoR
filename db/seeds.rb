@@ -77,4 +77,3 @@ Badge.create!(name: "Passage test in first try",
               img: "https://cdn1.vectorstock.com/i/1000x1000/37/15/completed-rubber-stamp-vector-12423715.jpg",
               conditions: "pasage_in_first_try")
 
-
